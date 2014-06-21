@@ -61,7 +61,7 @@ class UsersController < ApplicationController
     end
   end
   def create_session
-    user = User.where(:email => params[:email]).first
+    user = User.where(:user_name => params[:user_name]).first
     if user.present? and user.password == params[:password]
       session[:admin] = user
       redirect_to :root and return
@@ -85,6 +85,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :password)
+      params.require(:user).permit(:email, :password, :user_name)
     end
 end
