@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Description:
+  = @slider.description
+
+= link_to 'Edit', edit_slider_path(@slider)
+\|
+= link_to 'Back', sliders_path

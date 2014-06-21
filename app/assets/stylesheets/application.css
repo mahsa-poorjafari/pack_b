@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+
+.clear-float {clear:both}
+ul.menu {list-style:none}
+ul.menu li{display:inline}
