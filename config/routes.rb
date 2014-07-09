@@ -2,7 +2,7 @@ PackC::Application.routes.draw do
 
   resources :products
 
-  resources :sliders
+  resources :slides
 
   resources :users
 

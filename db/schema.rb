@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20140621092058) do
     t.datetime "image_updated_at"
   end
 
-  create_table "sliders", force: true do |t|
+  create_table "slides", force: true do |t|
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"

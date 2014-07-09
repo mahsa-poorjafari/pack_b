@@ -1,6 +1,6 @@
-class CreateSliders < ActiveRecord::Migration
+class CreateSlides < ActiveRecord::Migration
   def change
-    create_table :sliders do |t|
+    create_table :slides do |t|
       t.string :description
 
       t.timestamps

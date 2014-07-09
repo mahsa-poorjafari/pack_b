@@ -8,7 +8,7 @@ gem "html2haml"
 gem 'haml-rails'
 
 gem 'colorbox-rails'
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem "paperclip"
 gem 'ckeditor_rails'
 gem "friendly_id", "~> 5.0.1"
 gem 'jalalidate'
@@ -16,11 +16,11 @@ gem "twitter-bootstrap-rails"
 
 group :production do
   gem 'mysql2'
-  gem 'rails_12factor'
 end
 
 group :development, :test do
   gem 'mysql2'
+  gem 'checker', :require => false
 end
 
 # Use SCSS for stylesheets
@@ -43,11 +43,6 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
