@@ -11,15 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20140726132311) do
+ActiveRecord::Schema.define(version: 20140726174928) do
 
   create_table "categories", force: true do |t|
     t.string   "title_en"
     t.string   "title_fa"
     t.text     "description_en"
     t.text     "description_fa"
-
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -30,11 +31,12 @@ ActiveRecord::Schema.define(version: 20140726132311) do
     t.string   "type",              limit: 30
     t.integer  "width"
     t.integer  "height"
-
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
   create_table "messages", force: true do |t|
     t.string   "name"
@@ -45,15 +47,13 @@ ActiveRecord::Schema.define(version: 20140726132311) do
     t.datetime "updated_at"
   end
 
-  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
-  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
-
-
   create_table "pages", force: true do |t|
     t.string   "title"
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title_fa"
+    t.text     "text_fa"
   end
 
   create_table "pictures", force: true do |t|
@@ -73,10 +73,6 @@ ActiveRecord::Schema.define(version: 20140726132311) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
     t.string   "title_fa"
     t.text     "description_fa"
     t.integer  "category_id"
