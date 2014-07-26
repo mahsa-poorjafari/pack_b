@@ -9,7 +9,7 @@ gem 'haml-rails'
 
 gem 'colorbox-rails'
 gem "paperclip"
-gem 'ckeditor_rails'
+gem 'ckeditor'
 gem "friendly_id", "~> 5.0.1"
 gem 'jalalidate'
 gem "twitter-bootstrap-rails"
@@ -21,6 +21,7 @@ end
 group :development, :test do
   gem 'mysql2'
   gem 'checker', :require => false
+  gem 'thin'
 end
 
 # Use SCSS for stylesheets
