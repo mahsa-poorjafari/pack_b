@@ -1,10 +1,14 @@
 PackC::Application.routes.draw do
 
+
   resources :pictures
 
   resources :messages
 
   resources :categories
+
+
+  mount Ckeditor::Engine => '/ckeditor'
 
   resources :products
 
