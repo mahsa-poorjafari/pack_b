@@ -1,5 +1,11 @@
 PackC::Application.routes.draw do
 
+  resources :pictures
+
+  resources :messages
+
+  resources :categories
+
   resources :products
 
   resources :slides

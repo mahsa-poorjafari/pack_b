@@ -11,13 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140621092058) do
+ActiveRecord::Schema.define(version: 20140726132311) do
+
+  create_table "categories", force: true do |t|
+    t.string   "title_en"
+    t.string   "title_fa"
+    t.text     "description_en"
+    t.text     "description_fa"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone_number"
+    t.text     "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pages", force: true do |t|
     t.string   "title"
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "pictures", force: true do |t|
+    t.string   "description_en"
+    t.string   "description_fa"
+    t.integer  "product_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "products", force: true do |t|
@@ -29,6 +59,9 @@ ActiveRecord::Schema.define(version: 20140621092058) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "title_fa"
+    t.text     "description_fa"
+    t.integer  "category_id"
   end
 
   create_table "slides", force: true do |t|
