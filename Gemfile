@@ -15,7 +15,7 @@ gem 'ckeditor'
 gem "friendly_id", "~> 5.0.1"
 gem 'jalalidate'
 gem "twitter-bootstrap-rails"
-
+gem 'i18n'
 group :production do
   gem 'mysql2'
 end

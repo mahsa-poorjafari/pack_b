@@ -1,0 +1,41 @@
+
+= form_for @message ||= Message.new, :html => {:class => "contact-form", :id => "contact-form"} do |f|
+  - if @message.errors.any?
+    #error_explanation
+      %ul
+        - @message.errors.each do |attr, msg|
+          %li= msg 
+      
+  -if flash[:SendMsg]        
+    .alert.alert-success= flash[:SendMsg]
+ 
+  %p.contact-name    
+    %span.Necessary= t('msg.Required')
+    = f.text_field :name, name: "name", placeholder: "Full Name", :id => "contact_name"
+    
+    
+  %p.contact-email    
+    %span.Necessary= t('msg.Required')
+    = f.text_field :email, name: "email", placeholder: "Email Address"      , :id => "contact_email"
+    
+  %p.contact-phone    
+    = f.text_field :phone_number, name: "phone", placeholder: "Your Phone Number"      , :id => "contact_name"
+    
+  %p.contact-message
+    %span.Necessary=  t('msg.Required')
+    = f.text_area :text, cols: "40", name: "message", placeholder: "Your Message", rows: "15", :style => "resize:none", :id => "contact_message"
+    
+         
+  %p.contact-submit
+    = f.submit 'send', :class=> "submit", :id => "contact-submit"
+    
+  #response
+:javascript   
+  $(':submit').click(function(e) {
+    $(':text.needed, textarea.needed').each(function() {
+      if ($(this).val().length == 0) {
+        $(this).css('border', '2px solid red');
+        e.preventDefault();
+      }
+    });
+  });
