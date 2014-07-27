@@ -1,5 +1,5 @@
-%h4= t('msg.contact-title')
-= form_for @message ||= Message.new, :html => {:class => "contact"} do |f|
+
+= form_for @message ||= Message.new, :html => {:class => "contact-form", :id => "contact-form"} do |f|
   - if @message.errors.any?
     #error_explanation
       %ul
@@ -8,32 +8,28 @@
       
   -if flash[:SendMsg]        
     .alert.alert-success= flash[:SendMsg]
-      
-  
-  .form-group
-    = f.label t('msg.contact-name'),  :class => "control-label"    
+ 
+  %p.contact-name    
     %span.Necessary= t('msg.Required')
-    = f.text_field :name, :class => "form-control needed"  
+    = f.text_field :name, name: "name", placeholder: "Full Name", :id => "contact_name"
     
     
-  .form-group
-    = f.label t('msg.contact-email'),  :class => "control-label"
+  %p.contact-email    
     %span.Necessary= t('msg.Required')
-    = f.text_field :email, :class => "form-control needed"          
+    = f.text_field :email, name: "email", placeholder: "Email Address"      , :id => "contact_email"
     
-  .form-group
-    = f.label t('msg.contact-phone'),  :class => "control-label"
-    = f.text_field :phone, :class => "form-control"
+  %p.contact-phone    
+    = f.text_field :phone_number, name: "phone", placeholder: "Your Phone Number"      , :id => "contact_name"
     
-  .form-group
-    = f.label t('msg.contact-msg'),  :class => "control-label"
+  %p.contact-message
     %span.Necessary=  t('msg.Required')
-    = f.text_area :text, :class => "form-control needed", :style => "resize:none", :rows => 5
+    = f.text_area :text, cols: "40", name: "message", placeholder: "Your Message", rows: "15", :style => "resize:none", :id => "contact_message"
     
          
-  .form-group
-    = f.submit t('msg.contact-btn'), :class=> "send-msg"
-
+  %p.contact-submit
+    = f.submit 'send', :class=> "submit", :id => "contact-submit"
+    
+  #response
 :javascript   
   $(':submit').click(function(e) {
     $(':text.needed, textarea.needed').each(function() {
