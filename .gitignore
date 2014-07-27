@@ -14,3 +14,4 @@
 
 #ignore ckeditor assets
 public/ckeditor_assets
+public/assets
