@@ -24,6 +24,7 @@ group :development, :test do
   gem 'mysql2'
   gem 'checker', :require => false
   gem 'thin'
+  gem 'rspec-rails', '~> 3.0.0'
 end
 
 # Use SCSS for stylesheets
