@@ -14,4 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require ckeditor/init
-//= require_tree .
+//= require modernizr.js
+//= require bootstrap.min
+//= require supersized.3.2.7.min
+//= require waypoints
+//= require waypoints-sticky
+//= require jquery.isotope
+//= require jquery.fancybox.pack
+//= require jquery.fancybox-media
+//= require jquery.tweet
+//= require plugins
+//= require main

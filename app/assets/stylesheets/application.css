@@ -19,3 +19,19 @@ ul.menu li{display:inline}
 
 ul.admin {width:20%; float:right}
 span.Necessary {color:#DE5E60;}
+.container {position:absolute; left:13%}
+.contact-bg {background-image:url('image01.jpg');
+  background-size:cover; height:130%}
+.work-bg {background-image:url('image03.jpg');
+  background-size:cover; height:100%}
+.contact-bg:before, .work-bg:before {
+    content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;    
+		background-image: radial-gradient(circle, #A4BAA5, #65806B,#CCF7D8);
+		opacity: .65; 
+
+}
