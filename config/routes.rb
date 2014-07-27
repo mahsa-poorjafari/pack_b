@@ -1,23 +1,21 @@
 PackC::Application.routes.draw do
 
+  scope "(:locale)", :locale => /en|fa/ do  
+    resources :pictures
 
-  resources :pictures
+    resources :messages
 
-  resources :messages
+    resources :categories
+    
+    resources :products
 
-  resources :categories
+    resources :slides
 
+    resources :users
 
+    resources :pages
+  end
   mount Ckeditor::Engine => '/ckeditor'
-
-  resources :products
-
-  resources :slides
-
-  resources :users
-
-  resources :pages
-
   get "static/home"
   root :to => 'static#home'
   get "login" => "users#login"  
