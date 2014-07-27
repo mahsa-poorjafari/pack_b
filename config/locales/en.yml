@@ -21,3 +21,11 @@
 
 en:
   hello: "Hello world"
+  ckeditor:
+    page_title: 'CKEditor Files Manager1'
+    confirm_delete: 'Delete file?1'
+    buttons:
+      cancel: 'Cancel1'
+      upload: 'Upload1'
+      delete: 'Delete1'
+      next: 'Next1'
