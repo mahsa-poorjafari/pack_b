@@ -1,10 +1,10 @@
 !!!
 %html
   %head
-    %title= 'دیزاین کیمیاکاران بسته درجه دو'
+    %title= 'کیمیاکاران '
  
     = stylesheet_link_tag    "application", media: "all"
-    = javascript_include_tag "application"
+    
     = csrf_meta_tags 
 
   %body
@@ -17,7 +17,8 @@
     #home-slider
       .overlay
       .slider-text
-        #slidecaption
+        #slidecaption= 'کیمیاکاران'
+          
       .control-nav
         = link_to '#' , :class => "load-item", :id => "prevslide" do    
           %i.font-icon-arrow-simple-left
@@ -49,3 +50,4 @@
     / End Header
     = yield 
     = render "shared/footer"
+  = javascript_include_tag "application"

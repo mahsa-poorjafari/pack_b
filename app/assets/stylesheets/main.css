@@ -301,7 +301,7 @@ h3.spec {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #D5FAC6;
+	background: #1D6526;
 	opacity: 0.7;
 	filter: alpha(opacity=70);
 	z-index: 0;
@@ -336,16 +336,16 @@ h3.spec {
 #home-slider .control-nav {
 	position: absolute;
 	width: 100%;
-	background: #fff;
+	background: #4A7D47;
 	height: 50px;
 	bottom: 0;
-	z-index: 2;
+	z-index: 700;
 }
 
 #home-slider #nextslide,
 #home-slider #prevslide {
 	background-image: none;
-	background-color: #1BAE10;
+	background-color: #27723C;
 	display: inline-block;
 	margin: 0;
 	position: relative;
@@ -373,7 +373,7 @@ h3.spec {
 
 #home-slider #nextslide:hover,
 #home-slider #prevslide:hover {
-	background-color:#DE5E60;
+	background-color:#FFEC00;
 }
 
 #home-slider #nextslide i,
@@ -431,11 +431,11 @@ h3.spec {
 
 #home-slider ul#slide-list li.current-slide a,
 #home-slider ul#slide-list li.current-slide a:hover {
-	background-color:#59C912;
+	background-color:#1D6526;
 }
 
 #home-slider #nextsection {
-	background-color: #1BAE10;
+	background-color: #27723C;
 	margin: 0;
 	position: relative;
 	float:right;
@@ -449,7 +449,7 @@ h3.spec {
 }
 
 #home-slider #nextsection:hover {
-	background-color:#DE5E60;
+	background-color:#FFEC00;
 }
 
 #home-slider #nextsection i {
@@ -480,7 +480,7 @@ header .sticky-nav {
 	position: relative;
 	width: 100%;
 	height: 60px;
-	background: #3CC709;
+	background: #27723C;
 	z-index: 1001;
 	
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
@@ -553,7 +553,7 @@ nav#menu #menu-nav li a {
 
 nav#menu #menu-nav li.current a,
 nav#menu #menu-nav li a:hover {
-	color: #DE5E60;
+	color: #FFEC00;
 }
 
 
@@ -636,7 +636,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .page-alternate {
-	background: #D5FAC6;
+	background: #4A7D47;
 	padding: 100px 0;
 	position: relative;
 	z-index: 99;
@@ -693,7 +693,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .work-nav #filters li a.selected {
-	color: #DE5E60;
+	color: #FFEC00;
 }
 
 #thumbs {
@@ -935,8 +935,8 @@ nav#menu #menu-nav li a:hover {
 	-moz-box-shadow: none;
 	box-shadow: none;
 	
-	background: #D5FAC6;
-    color: #07250C;
+	background: #4A7D47;
+    color: #FFFF65;
     font-size: 16px;
     height: auto;
     padding: 15px;
@@ -980,7 +980,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 #contact-form .submit:hover {
-    background: #DE5E60;
+    background: #FFEC00;
     color: #FFFFFF;
 }
 
@@ -1040,6 +1040,7 @@ nav#menu #menu-nav li a:hover {
 
 #social-area {
     text-align: center;
+    background:#EDED5F;
 }
 
 #social-area #social ul {
@@ -1063,7 +1064,7 @@ nav#menu #menu-nav li a:hover {
 	width: 70px;
 	height: 70px;
 
-	background:#1BAE10;
+	background:#4A7D47;
 	
 	-webkit-transition: all 400ms ease-out 0s;	
 	   -moz-transition: all 400ms ease-out 0s;
@@ -1101,7 +1102,7 @@ nav#menu #menu-nav li a:hover {
 
 #social ul li:hover a,
 #social ul li.active a {
-	background-color: #DE5E60;	
+	background-color: #FFEC00;	
 	
 	-webkit-transform: rotateY(0deg);
 	   -moz-transform: rotateY(0deg);
@@ -1131,7 +1132,7 @@ footer {
 	position: relative;
 	width: 100%;
 	height: auto;
-	background: #3CC709;
+	background: #27723C;
 	text-align: center;
 	z-index: 99;
 }

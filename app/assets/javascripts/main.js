@@ -377,7 +377,7 @@ $(document).ready(function(){
 	Modernizr.load([
 	{
 		test: Modernizr.placeholder,
-		nope: '_include/js/placeholder.js', 
+		nope: 'placeholder.js', 
 		complete : function() {
 				if (!Modernizr.placeholder) {
 						Placeholders.init({
