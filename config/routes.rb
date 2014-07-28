@@ -1,4 +1,4 @@
-PackC::Application.routes.draw do
+PackB::Application.routes.draw do
 
   scope "(:locale)", :locale => /en|fa/ do  
     resources :pictures
