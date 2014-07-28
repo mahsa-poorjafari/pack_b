@@ -1,19 +1,15 @@
-%ul.menu
+%ul#menu-nav
+  %li.current
+    = link_to t('home'), '#home-slider'
+    
   %li
-    = link_to 'صفحه اصلی', root_path  
+    = link_to t('work'), '#work'
+    
   %li
-    = link_to 'پروژه ها', Product   
-  - Page.all.each do |page|
-    %li
-      = link_to page.title, page
-- if is_admin?
-  %b منوی مدیرسایت
-  %ul.admin
-    %li
-      = link_to 'پروفایل مدیرسایت', User
-    %li
-      = link_to 'مدیریت صفحات متنی', Page
-    %li
-      = link_to 'مدیریت اسلایدر', Slide
-
-.clear-float
+    = link_to t('about'), '#about'
+    
+  %li 
+    = link_to t('contact'), '#contact'
+    
+  %li
+    %a.external{href: "shortcodes.html"} Shortcodes

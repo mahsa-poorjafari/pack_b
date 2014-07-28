@@ -10,24 +10,24 @@
     .alert.alert-success= flash[:SendMsg]
  
   %p.contact-name    
-    %span.Necessary= t('msg.Required')
-    = f.text_field :name, name: "name", placeholder: "Full Name", :id => "contact_name"
+    
+    = f.text_field :name, name: "name", placeholder: t('msg.name'), :id => "contact_name", :class => I18n.locale
     
     
   %p.contact-email    
-    %span.Necessary= t('msg.Required')
-    = f.text_field :email, name: "email", placeholder: "Email Address"      , :id => "contact_email"
+    
+    = f.text_field :email, name: "email", placeholder: t('msg.email') , :id => "contact_email", :class => I18n.locale
     
   %p.contact-phone    
-    = f.text_field :phone_number, name: "phone", placeholder: "Your Phone Number"      , :id => "contact_name"
+    = f.text_field :phone_number, name: "phone", placeholder:  t('msg.phone')  , :id => "contact_name", :class => I18n.locale
     
   %p.contact-message
-    %span.Necessary=  t('msg.Required')
-    = f.text_area :text, cols: "40", name: "message", placeholder: "Your Message", rows: "15", :style => "resize:none", :id => "contact_message"
+    
+    = f.text_area :text, cols: "40", name: "message", placeholder:  t('msg.text'), rows: "15", :style => "resize:none", :id => "contact_message", :class => I18n.locale
     
          
-  %p.contact-submit
-    = f.submit 'send', :class=> "submit", :id => "contact-submit"
+  %p.contact-submit{:class => I18n.locale}
+    = f.submit  t('msg.send'), :class=> "submit", :id => "contact-submit"
     
   #response
 :javascript   

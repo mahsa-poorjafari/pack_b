@@ -15,8 +15,8 @@ License : MIT License / GPL License
 ----------------------------*/
 #controls-wrapper { margin:0 auto; height:42px; width:100%; bottom:0px; left:0; z-index:4; background:url(nav-bg.png) repeat-x; position:fixed; }
 #controls { overflow:hidden; height:100%; position:relative; text-align:left; z-index:5; }
-#slidecounter { float:left; color:#999; font:14px "Helvetica Neue", Helvetica, Arial, sans-serif; text-shadow:#000 0 -1px 0; margin:0px 10px 0 15px; line-height:42px; }
-#slidecaption { overflow:hidden; float:left; color:#FFF; font:400 14px "Helvetica Neue", Helvetica, Arial, sans-serif; text-shadow:#000 1px 1px 2px; margin:0 20px 0 0; line-height:42px; }
+#slidecounter { float:left; color:#999; font-size:14px; text-shadow:#000 0 -1px 0; margin:0px 10px 0 15px; line-height:42px; }
+#slidecaption { overflow:hidden; float:left; color:#FFF; font-weight:400; font-size: 14px ; text-shadow:#000 1px 1px 2px; margin:0 20px 0 0; line-height:42px; }
 
 #navigation { float:right; margin:0px 20px 0 0; }
 #play-button{ float:left; margin-top:1px;border-right:1px solid #333; background:url('supersized/bg-hover.png') repeat-x 0 44px; }
