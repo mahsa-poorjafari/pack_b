@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-PackC::Application.load_tasks
+PackB::Application.load_tasks

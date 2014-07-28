@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 fa:
+
   kimiakaran: 'کیمیا کاران'
   home: 'صفحه اصلی'
   work: 'محصولات '
@@ -39,3 +40,4 @@ fa:
   our_work: 'محصولات ما'
   type_of_work: 'انواع محصولات ما'
   All_Projects: 'تمام محصولات'
+
