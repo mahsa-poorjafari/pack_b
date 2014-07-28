@@ -1,4 +1,4 @@
-PackC::Application.configure do
+PackB::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
