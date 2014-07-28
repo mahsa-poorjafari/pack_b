@@ -19,5 +19,23 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
+fa:
+  kimiakaran: 'کیمیا کاران'
+  home: 'صفحه اصلی'
+  work: 'محصولات '
+  about: 'درباره ما'
+  contact: 'تماس با ما'
+  Get_in_Touch: 'با ما در ارتباط باشید.'
+  Contact_Details: 'جزئیات تماس'
+  
+  msg:
+    name: 'نام خود را وارد کنید.'
+    email: 'ایمیل خود را وارد کنید.'
+    phone: 'شماره تماس خود را وارد کنید.'
+    text: 'متن پیام خود را وارد کنید.'
+    send: 'ارسال پیام'
+  
+  
+  our_work: 'محصولات ما'
+  type_of_work: 'انواع محصولات ما'
+  All_Projects: 'تمام محصولات'

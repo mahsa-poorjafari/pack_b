@@ -24,11 +24,10 @@ html, hmtl a{
 }
 
 body{
-	background:#fff;
+	background:#B0D6BA;
 	color:#7F8289;
 	font-weight:300;
-	font-size:16px;
-	font-family: 'Titillium Web', sans-serif;
+	font-size:16px;	
 	line-height:28px;
 }
 
@@ -113,7 +112,7 @@ hr {
 
 input, button, select, textarea {
 	font-weight: 300;
-	font-family: 'Titillium Web', sans-serif;
+	
 	outline: 0;
 }
 
@@ -150,7 +149,7 @@ pre {
             border-radius: 3px;
   	color: #232527;
   	font-size: 12px;
-  	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  	
 }
 
 code {
@@ -205,7 +204,7 @@ h6{
 	margin:0 0 20px 0;
 	color:#034D14;
 	font-weight:300;
-	font-family: 'Titillium Web', sans-serif;
+	
 	line-height:1.5em;
 }
 
@@ -322,6 +321,7 @@ h3.spec {
 	width: 100%;
 	line-height: 250px;
 	margin: 0;
+  font-size:3em;
 	text-align: center;
 	text-shadow: none;	
 }
@@ -538,9 +538,6 @@ nav#menu #menu-nav li {
 	margin-left: 50px;	
 }
 
-nav#menu #menu-nav li:first-child {
-	margin-left: 0;	
-}
 
 nav#menu #menu-nav li a {
 	color: #FFFFFF;
@@ -961,8 +958,8 @@ nav#menu #menu-nav li a:hover {
 }
 
 #contact-form .submit {
-    background: #1BAE10;
-    color: #23262C;
+    background: #4A7D47;
+    color: #FFEC00;
     cursor: pointer;
     display: inline-block;
     font-size: 18px;
@@ -1135,6 +1132,7 @@ footer {
 	background: #27723C;
 	text-align: center;
 	z-index: 99;
+  
 }
 
 footer .credits {

@@ -7,7 +7,7 @@
     
     = csrf_meta_tags 
 
-  %body
+  %body{:class => I18n.locale}
     / This section is for Splash Screen
     .ole
       %section#jSplash
@@ -17,7 +17,7 @@
     #home-slider
       .overlay
       .slider-text
-        #slidecaption= 'کیمیاکاران'
+        #slidecaption{:class => I18n.locale}= t('kimiakaran')
           
       .control-nav
         = link_to '#' , :class => "load-item", :id => "prevslide" do    
@@ -27,6 +27,11 @@
         %ul#slide-list
         = link_to '#work' ,  :id => "nextsection" do        
           %i.font-icon-arrow-simple-down
+        #nextsection{:style => "margin-right:1px; text-align:center"}
+          = link_to (image_tag 'flag/fa.png'), locale: :fa
+          = link_to (image_tag 'flag/en.png'), locale: :en
+          
+        
     / End Homepage Slider
  
     %header
@@ -34,20 +39,14 @@
         %a#mobile-nav.menu-nav{href: "#menu-nav"}
         #logo
           %a#goUp{href: "#home-slider", title: "Brushed | Responsive One Page Template"} Brushed Template
-        
+        - if is_admin?
+          .admin_menu.fa
+            %h3= 'منوی مدیرسایت'
+            = render 'shared/admin_menu'
         %nav#menu
-          %ul#menu-nav
-            %li.current
-              %a{href: "#home-slider"} Home
-            %li
-              %a{href: "#work"} Our Work
-            %li
-              %a{href: "#about"} About Us
-            %li
-              %a{href: "#contact"} Contact
-            %li
-              %a.external{href: "shortcodes.html"} Shortcodes
+          = render 'shared/menu'
     / End Header
     = yield 
     = render "shared/footer"
+    
   = javascript_include_tag "application"

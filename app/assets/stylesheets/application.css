@@ -14,10 +14,37 @@
 
 
 .clear-float {clear:both}
-ul.menu {list-style:none; width:70%; float:right}
-ul.menu li{display:inline}
 
-ul.admin {width:20%; float:right}
+.en {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; direction:ltr}
+.fa {font-family:  'open_sansregular'; direction:rtl}
+
+.row.en [class*="span"] {float:left}
+.row.fa [class*="span"] {float:right}
+.contact-submit.fa .submit {font-family:  'open_sansregular'; direction:rtl}
+.contact-submit.en .submit {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; direction:ltr}
+
+.admin_menu {
+  z-index:1000;
+  margin-left:10px;
+  top:0;  width:20%;
+  float:left;
+  overflow:hidden;  
+  background:#4A7D47; color:#FFEC00; height:35px;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+.admin_menu h3 {text-align:center
+}
+.admin_menu:hover { height:200px; cursor:pointer}
+.admin_menu ul{list-style-type:circle; text-align:right; padding-right:35px; }
+.admin_menu ul li a{color:#FFEC00;}
+.admin_menu ul li a:hover{color:#000;}
+
 span.Necessary {color:#DE5E60;}
 .container {position:absolute; left:13%}
 .contact-bg {background-image:url('image01.jpg');

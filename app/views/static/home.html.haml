@@ -20,7 +20,7 @@
     .row
       .span12
         .title-page
-          %h2.title Our Work
+          %h2.title= t('our_work')
           %h3.title-description
             Check Out Our Projects on
             = succeed "." do
@@ -28,14 +28,14 @@
               
     / End Title Page
     / Portfolio Projects
-    .row
+    .row{:class => I18n.locale}
       .span3
         / Filter
         %nav#options.work-nav
           %ul#filters.option-set{"data-option-key" => "filter"}
-            %li.type-work Type of Work
+            %li.type-work= t('type_of_work')
             %li
-              = link_to 'All Projects', "#filter", "data-option-value" => "*", :class => "selected"              
+              = link_to t('All_Projects'), "#filter", "data-option-value" => "*", :class => "selected"              
             %li
               = link_to 'Design', "#filter", "data-option-value" => ".design"              
             %li
@@ -109,7 +109,7 @@
     .row
       .span12
         .title-page
-          %h2.title About Us
+          %h2.title= t('about')
           %h3.title-description Learn About our Team & Culture.
     / End Title Page
 
@@ -121,16 +121,16 @@
     .row
       .span12
         .title-page
-          %h2.title Get in Touch
+          %h2.title= t('Get_in_Touch')
           %h3.title-description We’re currently accepting new client projects. We look forward to serving you.
     / End Title Page
     / Contact Form
-    .row
+    .row{:class => I18n.locale}
       .span9
         = render 'shared/msg_form'
       .span3
         .contact-details
-          %h3 Contact Details
+          %h3= t('Contact_Details')
           %ul
             %li
               %a{href: "#"} hello@brushed.com
