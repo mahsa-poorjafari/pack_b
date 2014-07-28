@@ -1,15 +1,28 @@
-%ul#menu-nav
-  %li.current
-    = link_to t('home'), '#home-slider'
+- if current_page?(root_path)    
+  %ul#menu-nav  
+    %li.current
+      = link_to t('home'), '#home-slider'
+      
+    %li
+      = link_to t('work'), '#work'
+      
+    %li
+      = link_to t('about'), '#about'
+      
+    %li 
+      = link_to t('contact'), '#contact'
+      
+    %li
+      %a.external{href: "shortcodes.html"} Shortcodes
+      
+- else
+  %ul#other-page-menu
+    %li{:class => ('active' if current_page?(root_path))} 
+      = link_to t('home'), root_path      
+    %li{:class => ('active' if current_page?(categories_path))}
+      = link_to t('work'), Category
+    %li{:class => ('active' if current_page?(pages_path))}
+      = link_to t('about'), Page
+    %li{:class => ('active' if current_page?(pages_path))}
+      = link_to t('contact'), Page
     
-  %li
-    = link_to t('work'), '#work'
-    
-  %li
-    = link_to t('about'), '#about'
-    
-  %li 
-    = link_to t('contact'), '#contact'
-    
-  %li
-    %a.external{href: "shortcodes.html"} Shortcodes
