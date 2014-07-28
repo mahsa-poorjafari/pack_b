@@ -1,21 +1,22 @@
-%h1 Listing pages
+.page.fa.other-page  
+  %h1 Listing pages
 
-%table
-  %tr
-    %th Title
-    %th Text
-    %th
-    %th
-    %th
-
-  - @pages.each do |page|
+  %table
     %tr
-      %td= page.title
-      %td= page.text
-      %td= link_to 'Show', page
-      %td= link_to 'Edit', edit_page_path(page)
-      %td= link_to 'Destroy', page, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %th Title
+      %th Text
+      %th
+      %th
+      %th
 
-%br
+    - @pages.each do |page|
+      %tr
+        %td= page.title
+        %td= page.text
+        %td= link_to 'Show', page
+        %td= link_to 'Edit', edit_page_path(page)
+        %td= link_to 'Destroy', page, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-= link_to 'ایجاد صفحه متنی جدید', new_page_path
+  %br
+
+  = link_to 'ایجاد صفحه متنی جدید', new_page_path
