@@ -23,6 +23,19 @@
 .contact-submit.fa .submit {font-family:  'open_sansregular'; direction:rtl}
 .contact-submit.en .submit {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; direction:ltr}
 
+.other-page {min-height:300px;}
+ul#other-page-menu {display: block;
+list-style-type: disc;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;}
+ul#other-page-menu li {list-style: none;
+display: inline-block;
+margin-left: 50px; }
+ul#other-page-menu li a {color:#fff;}
+ul#other-page-menu li.active a, ul#other-page-menu  li:hover a{color:#FFEC00;}
 .admin_menu {
   z-index:1000;
   margin-left:10px;
