@@ -76,12 +76,7 @@ BRUSHED.slider = function(){
 		slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
-		slides 					:  	[			// Slideshow Images
-											{image : 'assets/slide1.jpg', title : '<div class="slide-content">Brushed1</div>', thumb : '', url : ''},
-											{image : 'assets/slide2.jpg', title : '<div class="slide-content">Brushed2</div>', thumb : '', url : ''},
-											{image : 'assets/slide3.jpg', title : '<div class="slide-content">Brushed3</div>', thumb : '', url : ''}
-											
-									],
+		slides 					:  	window.user_slides,
 									
 		// Theme Options			   
 		progress_bar			:	0,			// Timer for each slide							
