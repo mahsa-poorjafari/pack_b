@@ -1,12 +1,18 @@
-%p#notice= notice
-
-%p
-  %b Title:
-  = @product.title
-%p
-  %b Description:
-  = @product.description
-
-= link_to 'Edit', edit_product_path(@product)
-\|
-= link_to 'Back', products_path
+.page.fa
+  .other-page 
+    %p#notice= notice
+    %p
+      %b عنوان محصول:
+      = @product.title
+    %p
+      %b توضیحات:
+      = @product.description
+    
+    - if @product.photos.present?
+      - @product.photos.each do |pic|  
+        %div=image_tag pic.image(:small)
+        
+    - if is_admin?
+      = link_to 'ویرایش', edit_product_path(@product)
+      \|
+      = link_to 'بازگشت', :back

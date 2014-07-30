@@ -1,0 +1,22 @@
+= form_for @photo do |f|
+  - if @photo.errors.any?
+    #error_explanation      
+      %ul
+        - @photo.errors.each do |attr, msg|
+          %li= msg
+
+  .field
+    = f.label 'توضیحات به فارسی:'
+    = f.text_field :description_fa  
+  .field
+    = f.label 'توضیحات به انگلیسی:'
+    = f.text_field :description_en
+  .field
+    = f.label 'محصول مربوط:'
+    = f.select(:product_id, Product.all.collect {|u| [u.title_fa, u.id]}, :prompt => ' بخش را انتخاب کنید.') 
+    
+  .field
+    = f.label 'تصویر:'
+    = f.file_field :image
+  .actions
+    = f.submit 'ثبت', :class => "btn btn-default"

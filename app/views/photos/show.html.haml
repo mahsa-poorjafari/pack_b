@@ -1,0 +1,17 @@
+.page.fa
+  .other-page    
+    %p#notice= notice
+
+    %p
+      = image_tag @photo.image(:small)
+    %p
+      %b توضیحات
+      = @photo.description
+    
+    %p
+      %b گروه مربوط
+      = @photo.product.title
+
+    = link_to 'ویرایش', edit_photo_path(@photo)
+    \|
+    = link_to 'بازگشت', :back

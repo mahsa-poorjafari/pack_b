@@ -1,0 +1,24 @@
+.page.fa
+  .other-page
+    %h1 لیست تصاویر محصولات
+
+    %table
+      %tr            
+        %th توضیحات
+        %th محصول مربوطه
+        %th
+        %th
+        %th
+
+      - @photos.each do |photo|
+        %tr
+          %td= photo.description_fa
+          %td= photo.description_en
+          %td= photo.product.title
+          %td= link_to 'Show', photo
+          %td= link_to 'ویرایش', edit_photo_path(photo)
+          %td= link_to 'حذف', photo, :method => :delete, :data => { :confirm => 'آیا مطمئن هستید؟' }
+
+    %br
+
+    = link_to 'تصویر جدید', new_photo_path, :class => "btn btn-default"

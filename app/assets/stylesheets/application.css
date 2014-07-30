@@ -75,3 +75,5 @@ span.Necessary {color:#DE5E60;}
 		opacity: .65; 
 
 }
+.work-nav ul#filters li .admin-link a.item-links{ color:#FF0000; font-size:14px}
+.work-nav ul#filters li .admin-link a.item-links:hover{ color:#FFF; }
