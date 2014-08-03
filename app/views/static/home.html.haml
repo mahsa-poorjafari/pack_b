@@ -1,18 +1,3 @@
-/ Analytics
-:javascript
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'Insert Your Code']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-/End Analytics 
-
-
-
 / Our Work Section
 #work.page.work-bg
   .container
@@ -22,9 +7,6 @@
         .title-page
           %h2.title= t('our_work')
           %h3.title-description
-            Check Out Our Projects on
-            = succeed "." do
-              = link_to 'Dribbble', '#'
               
     / End Title Page
     / Portfolio Projects
@@ -77,7 +59,7 @@
       .span12
         .title-page
           %h2.title= t('about')
-          %h3.title-description Learn About our Team & Culture.
+          %h3.title-description
     / End Title Page
 
 
@@ -89,7 +71,7 @@
       .span12
         .title-page
           %h2.title= t('Get_in_Touch')
-          %h3.title-description We’re currently accepting new client projects. We look forward to serving you.
+          %h3.title-description شما میتوانید از طریق ایمیل یا  تلفن با ما در ارتباط باشید
     / End Title Page
     / Contact Form
     .row{:class => I18n.locale}
