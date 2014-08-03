@@ -38,7 +38,7 @@
       .sticky-nav
         %a#mobile-nav.menu-nav{href: "#menu-nav"}
         #logo
-          %a#goUp{href: "#home-slider", title: "Brushed | Responsive One Page Template"} Brushed Template
+          %a#goUp{href: "#home-slider", title: "KIMIA KARAN "} KIMIA KARAN
         - if is_admin?
           .admin_menu.fa
             %h3= 'منوی مدیرسایت'
@@ -48,5 +48,10 @@
     / End Header
     = yield 
     = render "shared/footer"
+    / Back To Top
+    %a#back-to-top{href: "#"}
+      %i.font-icon-arrow-simple-up
+    / End Back to Top
+
     
   = javascript_include_tag "application"
