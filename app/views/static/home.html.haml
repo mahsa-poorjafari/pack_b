@@ -58,8 +58,8 @@
     .row
       .span12
         .title-page
-          %h2.title= t('about')
-          %h3.title-description
+          %h2.title= @about.first.title
+          %h3.title-description= raw @about.first.text
     / End Title Page
 
 
@@ -80,16 +80,7 @@
       .span3
         .contact-details
           %h3= t('Contact_Details')
-          %ul
-            %li
-              %a{href: "#"} hello@brushed.com
-            %li (916) 375-2525
-            %li
-              Brushed Studio
-              %br/
-              5240 Vanish Island. 105
-              %br/
-              Unknow
+          =raw @about.first.text
     / End Contact Form
 / End Contact Section
 
