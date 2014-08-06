@@ -17,6 +17,8 @@
     
     :javascript
       user_slides = [#{Slide.get_supersized_js}]
+      $('ul#supersized li img').css('left', '0');
+      $('ul#supersized li img').css('width', '100%');
     #home-slider.en
       .overlay
       .slider-text

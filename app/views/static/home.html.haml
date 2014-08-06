@@ -2,15 +2,15 @@
 #work.page.work-bg
   .container
     / Title Page
-    .row
-      .span12
-        .title-page
-          %h2.title= t('our_work')
-          %h3.title-description
+    .row      
+      .title-page
+        %h2.title= t('our_work')
+        %h3.title-description
+      
               
     / End Title Page
     / Portfolio Projects
-    .row{:class => I18n.locale}
+    .row{:class => I18n.locale, :style => "margin:0"}
       .span3
         / Filter
         %nav#options.work-nav
@@ -28,14 +28,14 @@
                     
               
         / End Filter
-      .span9
+      .span7
         .row
           %section#projects
             %ul#thumbs
               - @categories.each do |category|
                 / Item Project and Filter Name
                 - category.products.each do |product|
-                  %li.item-thumbs.span3{:class => category.title_en}
+                  %li.item-thumbs.span2{:class => category.title_en}
                     / Fancybox - Gallery Enabled - Title - Full Image                    
                     = link_to product, :class => "hover-wrap", "data-fancybox-group" => "gallery" do                
                       %span.overlay-img
@@ -55,11 +55,10 @@
 #about.page-alternate{:style => "height:50%"}
   .container
     / Title Page
-    .row
-      .span12
-        .title-page
-          %h2.title= @about.first.title
-          %h3.title-description= raw @about.first.text
+    .row      
+      .title-page
+        %h2.title= @about.first.title
+        %h3.title-description= raw @about.first.text
     / End Title Page
 
 
@@ -68,14 +67,14 @@
   .container
     / Title Page
     .row
-      .span12
-        .title-page
-          %h2.title= t('Get_in_Touch')
-          %h3.title-description شما میتوانید از طریق ایمیل یا  تلفن با ما در ارتباط باشید
+    
+      .title-page
+        %h2.title= t('Get_in_Touch')
+        %h3.title-description شما میتوانید از طریق ایمیل یا  تلفن با ما در ارتباط باشید
     / End Title Page
     / Contact Form
     .row{:class => I18n.locale}
-      .span9
+      .span7
         = render 'shared/msg_form'
       .span3
         .contact-details
@@ -83,5 +82,3 @@
           =raw @about.first.text
     / End Contact Form
 / End Contact Section
-
-
