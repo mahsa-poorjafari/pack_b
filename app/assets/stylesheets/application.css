@@ -60,9 +60,9 @@ box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 
 span.Necessary {color:#DE5E60;}
 .container {position:absolute; width:100%; padding:4%;}
-.contact-bg {background-image:url(image-path('image01.jpg'));
+.contact-bg {background-image:url('image01.jpg');
   background-size:cover; height:130%}
-.work-bg {background-image:url(image-path('image03.jpg'));
+.work-bg {background-image:url('image03.jpg');
   background-size:cover; height:100%}
 .contact-bg:before, .work-bg:before {
     content: '';

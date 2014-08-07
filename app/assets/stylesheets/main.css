@@ -563,7 +563,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .menu-nav {
-	background-image:url(image-path('menu-mobile.png'));
+	background-image:url('menu-mobile.png');
   background-repeat:no-repeat;
   background-position: 0 0;
   
