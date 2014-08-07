@@ -20,7 +20,10 @@ PackB::Application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_assets = false
+  config.serve_static_assets = true
+  config.assets.compress = true
+  config.assets.compile = false
+  config.assets.precompile << /(^[^_\/]|\/[^_])[^\/]*$/
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
