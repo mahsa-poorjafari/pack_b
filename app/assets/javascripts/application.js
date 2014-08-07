@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require ckeditor/init
-//= require modernizr.js
+//= require modernizr
 //= require bootstrap.min
 //= require supersized.3.2.7.min
 //= require waypoints
