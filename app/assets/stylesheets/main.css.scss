@@ -563,7 +563,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .menu-nav {
-	background-image:url('menu-mobile.png');
+	background-image:url(image-path('menu-mobile.png'));
   background-repeat:no-repeat;
   background-position: 0 0;
   
@@ -1152,7 +1152,7 @@ footer .credits {
 
 #back-to-top {
 	display: none;
-	background-color: #3C3F45;
+	background-color: #27723C;
 	margin: 0;
 	position: fixed;
 	bottom: 0;
@@ -1168,7 +1168,7 @@ footer .credits {
 }
 
 #back-to-top:hover {
-	background-color:#DE5E60;
+	background-color:#FFEC00;
 }
 
 #back-to-top i {

@@ -407,7 +407,7 @@ $(document).ready(function(){
 	BRUSHED.goUp();
 	BRUSHED.filter();
 	BRUSHED.fancyBox();
-	BRUSHED.contactForm();
+	
 	BRUSHED.tweetFeed();
 	BRUSHED.scrollToTop();
 	BRUSHED.utils();
