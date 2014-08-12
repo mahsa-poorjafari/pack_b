@@ -28,7 +28,7 @@ body{
 	color:#7F8289;
 	font-weight:300;
 	font-size:16px;	
-	line-height:28px;
+	
 }
 
 
@@ -710,10 +710,18 @@ nav#menu #menu-nav li a:hover {
 	overflow: hidden;
 	margin-bottom: 30px;
 	cursor: pointer;
+  width:25%;
+  margin:2%;
+  text-align:center;
+  border:#4D4D4D solid 2px;
+  border-radius:5px;
+  height:170px;
+  overflow:hidden  ;
 }
-
+.item-thumbs img {height:100%;}
 .item-thumbs a + img {
 	width: 100%;	
+  
 }
 
 .item-thumbs .hover-wrap {
@@ -754,6 +762,7 @@ nav#menu #menu-nav li a:hover {
 	width: 100%;
 	height: 100%;
 	background: #FFEC00;
+  right:0;
 	
 	opacity: 0.80;
 	filter: alpha(opacity=80);

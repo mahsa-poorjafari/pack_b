@@ -11,7 +11,7 @@
     / End Title Page
     / Portfolio Projects
     .row{:class => I18n.locale, :style => "margin:0"}
-      .span3
+      .project-list
         / Filter
         %nav#options.work-nav
           %ul#filters.option-set{"data-option-key" => "filter"}
@@ -19,23 +19,20 @@
             %li
               = link_to t('All_Projects'), "#filter", "data-option-value" => "*", :class => "selected"              
             - @categories.each do |category|
-              %li
-                = link_to category.title, "#filter", "data-option-value" => "." + category.title_en
-                - if is_admin?
-                  .admin-link
-                    = link_to 'ویرایش ', edit_category_path(category), :class => "item-links"                      
-                    = link_to 'حذف', category, :method => :delete, :data => { :confirm => 'آیا مطمئن هستید؟' }, :class => "item-links"
+              %li                
+                = link_to category.title, "#filter", "data-option-value" => ".item#{category.id}"
+                
                     
               
         / End Filter
-      .span7
+      .project-pic
         .row
           %section#projects
             %ul#thumbs
               - @categories.each do |category|
                 / Item Project and Filter Name
                 - category.products.each do |product|
-                  %li.item-thumbs.span2{:class => category.title_en}
+                  %li.item-thumbs{:class => "item" + category.id.to_s}
                     / Fancybox - Gallery Enabled - Title - Full Image                    
                     = link_to product, :class => "hover-wrap", "data-fancybox-group" => "gallery" do                
                       %span.overlay-img
@@ -79,6 +76,6 @@
       .span3
         .contact-details
           %h3= t('Contact_Details')
-          =raw @about.first.text
+          =raw @contact.first.text
     / End Contact Form
 / End Contact Section
