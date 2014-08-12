@@ -40,6 +40,7 @@
                     / Thumb Image and Description
                     - if product.photos.present?
                       = image_tag product.photos.first.image(:small)
+                      %span.pro-title= product.title
                   
               / End Item Project
                 
