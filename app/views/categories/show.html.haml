@@ -1,15 +1,14 @@
-.page.fa
-  .other-page    
+.fa.other-page    
 
-    %p
-      %b عنوان گروه
-      = @category.title
-    
-    %p
-      %b توضیحات
-      = @category.description
-    
+  %p
+    %b عنوان گروه
+    = @category.title
+  
+  %p
+    %b توضیحات
+    = @category.description
+  
 
-    = link_to 'ویرایش', edit_category_path(@category)
-    \|
-    = link_to 'بازگشت', :back
+  = link_to 'ویرایش', edit_category_path(@category)
+  \|
+  = link_to 'بازگشت', :back

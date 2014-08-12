@@ -1,22 +1,18 @@
-.page.fa.other-page  
-  %h1 Listing users
-
+.fa.other-page  
+  %h1 لیست کاربران
+  
   %table
     %tr
-      %th Email
-      %th Password
+      %th ایمیل
+      %th رمزعبور
       %th
-      %th
-      %th
-
+      
     - @users.each do |user|
       %tr
         %td= user.email
         %td= user.password
-        %td= link_to 'Show', user
-        %td= link_to 'Edit', edit_user_path(user)
-        %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td
+          = link_to 'مشاهده', user
+          = link_to 'ویرایش', edit_user_path(user)
+          = link_to 'حذف', user, :method => :delete, :data => { :confirm => 'آیا مطمئن هستید؟' }
 
-  %br
-
-  = link_to 'New User', new_user_path

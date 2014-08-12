@@ -23,7 +23,8 @@
 .contact-submit.fa .submit {font-family:  'open_sansregular'; direction:rtl}
 .contact-submit.en .submit {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; direction:ltr}
 
-.other-page {min-height:300px; padding:5%}
+.other-page {min-height:300px; padding:5%; background:#B0D6BA; color:#000;}
+
 ul#other-page-menu {display: block;
 list-style-type: disc;
 -webkit-margin-before: 1em;
@@ -64,7 +65,7 @@ span.Necessary {color:#DE5E60;}
   background-size:cover; height:130%}
 .work-bg {background-image:url(image-path('image03.jpg'));
   background-size:cover; min-height:150%}
-.contact-bg:before, .work-bg:before {
+.contact-bg:before, .work-bg:before{
     content: '';
 		position: absolute;
 		top: 0;
