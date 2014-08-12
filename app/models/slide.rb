@@ -13,11 +13,10 @@ class Slide < ActiveRecord::Base
   def self.get_supersized_js
     ret = []
     
-    #[1,2,3].each do |slide|
-    ret << "{image : \"assets/slide1.jpg\", title : \"<div class='slide-content'>description</div>\", thumb : '', url : ''}  ,        
-           {image : \"assets/slide2.jpg\", title : \"<div class='slide-content'>description</div>\", thumb : '', url : ''}  ,        
-           {image : \"assets/slide3.jpg\", title : \"<div class='slide-content'>description</div>\", thumb : '', url : ''} "         
-    #end
+    Slide.all.each do |slide|
+      ret << "{image : \"#{slide.image(:medium)}\", title : \"<div class='slide-content'>#{slide.description}</div>\", thumb : '', url : ''}"
+             
+    end
     ret.join(",")
   end
 

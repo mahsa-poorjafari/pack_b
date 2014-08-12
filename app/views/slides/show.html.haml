@@ -1,9 +1,12 @@
-%p#notice= notice
+.page.fa.other-page  
+  %p#notice= notice
+  = image_tag @slide.image(:small)
 
-%p
-  %b Description:
-  = @slide.description
-
-= link_to 'Edit', edit_slide_path(@slide)
-\|
-= link_to 'Back', slides_path
+  %p
+    %b توضیحات:
+    = @slide.description
+    
+  - if is_admin?
+    = link_to 'ویرایش', edit_slide_path(@slide)
+    \|
+    = link_to 'بازگشت', :back
