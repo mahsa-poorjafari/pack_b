@@ -7,7 +7,7 @@
     
     = csrf_meta_tags 
     %meta{:charset => "utf-8"}
-    %meta{:name => "keywords", :content => Category.all.collect(&:title_fa).join(" "), "kimiakaran", "kimia karan", "کیمیاکاران", "کیمیا کاران" } 
+    %meta{:name => "keywords", :content => Category.all.collect(&:title_fa).join(" ")} 
     %meta{:name => "description", :content => "کیمیاکاران, kimiakaran"}
     %meta{content: "no", "http-equiv" => "kimiakaran, کیمیاکاران"}
     = yield(:refresh_meta) if content_for?(:refresh_meta)
