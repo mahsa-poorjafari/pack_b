@@ -6,7 +6,7 @@
   %table
     %tr
       %th عنوان
-      %th توضیحات
+      
       %th گروه مربوطه
       %th
       %th
@@ -18,7 +18,7 @@
         
         %td
           - if product.category_id.present?
-            = product.category_id
+            = product.category.title
         %td
           = link_to 'مشاهده', product
           \|

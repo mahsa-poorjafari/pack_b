@@ -5,8 +5,8 @@
     = @category.title
   
   %p
-    %b توضیحات
-    = @category.description
+    
+    =raw @category.description
   
 
   = link_to 'ویرایش', edit_category_path(@category)

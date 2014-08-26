@@ -1,18 +1,19 @@
-.page.fa.other-page{:style => "height:100%"}
-  - if is_admin?
-    = link_to 'ایجاد دسته جدید محصولات', new_category_path, :class => "btn btn-default"
-  / Our Work Section
-  #work
-    - @categories.each do |category|
-      %div
-        %p= category.title
-        %p= category.description
-        = link_to 'مشاهده', category
-        \|
-        = link_to 'ویرایش', edit_product_path(category)
-        \|
-        = link_to 'حذف', category, :method => :delete, :data => { :confirm => 'آیا مطمئن هستید؟' }
-             
-.clear-float              
+.page.fa
+  .other-page{:style => "height:100%"}
+    - if is_admin?
+      = link_to 'ایجاد دسته جدید محصولات', new_category_path, :class => "btn btn-default"
+    / Our Work Section
+    #work
+      - @categories.each do |category|
+        %div
+          %p= category.title
+          
+          = link_to 'مشاهده بیشتر', category
+          \|
+          = link_to 'ویرایش', edit_product_path(category)
+          \|
+          = link_to 'حذف', category, :method => :delete, :data => { :confirm => 'آیا مطمئن هستید؟' }
+               
+  .clear-float              
    
     
