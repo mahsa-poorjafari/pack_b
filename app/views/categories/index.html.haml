@@ -3,57 +3,16 @@
     = link_to 'ایجاد دسته جدید محصولات', new_category_path, :class => "btn btn-default"
   / Our Work Section
   #work
-    .container
-      / Title Page
-      .row
-        .span12
-          .title-page
-            %h2.title= t('our_work')
-            %h3.title-description
-              Check Out Our Projects on
-              = succeed "." do
-                = link_to 'Dribbble', '#'
-                
-      / End Title Page
-      / Portfolio Projects
-      .row{:class => I18n.locale}
-        .span3
-          / Filter
-          %nav#options.work-nav
-            %ul#filters.option-set{"data-option-key" => "filter"}
-              %li.type-work= t('type_of_work')
-              %li
-                = link_to t('All_Projects'), "#filter", "data-option-value" => "*", :class => "selected"              
-              - @categories.each do |category|
-                %li
-                  = link_to category.title, "#filter", "data-option-value" => "." + category.title_en
-                  - if is_admin?
-                    .admin-link
-                      = link_to 'ویرایش ', edit_category_path(category), :class => "item-links"                      
-                      = link_to 'حذف', category, :method => :delete, :data => { :confirm => 'آیا مطمئن هستید؟' }, :class => "item-links"
-                      
-          / End Filter
-        .span9
-          .row
-            %section#projects
-              %ul#thumbs
-                - @categories.each do |category|
-                  / Item Project and Filter Name
-                  - category.products.each do |product|
-                    %li.item-thumbs.span3{:class => category.title_en}
-                      / Fancybox - Gallery Enabled - Title - Full Image                    
-                      = link_to product, :class => "hover-wrap", "data-fancybox-group" => "gallery" do                
-                        %span.overlay-img
-                        %span.overlay-img-thumb.font-icon-plus
-                      / Thumb Image and Description
-                      - if product.photos.present?
-                        = image_tag product.photos.first.image(:small)
-                    
-                / End Item Project
-                
-  .clear-float              
-    / End Portfolio Projects
-/ End Our Work Section
-
-
+    - @categories.each do |category|
+      %div
+        %p= category.title
+        %p= category.description
+        = link_to 'مشاهده', category
+        \|
+        = link_to 'ویرایش', edit_product_path(category)
+        \|
+        = link_to 'حذف', category, :method => :delete, :data => { :confirm => 'آیا مطمئن هستید؟' }
+             
+.clear-float              
+   
     

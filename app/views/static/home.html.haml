@@ -16,8 +16,7 @@
         %nav#options.work-nav
           %ul#filters.option-set{"data-option-key" => "filter"}
             %li.type-work= t('type_of_work')
-            %li
-              = link_to t('All_Projects'), "#filter", "data-option-value" => "*", :class => "selected"              
+            
             - @categories.each do |category|
               %li                
                 = link_to category.title, "#filter", "data-option-value" => ".item#{category.id}"
