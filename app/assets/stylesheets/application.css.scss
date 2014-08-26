@@ -86,3 +86,7 @@ span.Necessary {color:#DE5E60;}
   right:0; bottom:0;
 }
 .project-list {width:30%; float:right}
+
+ul.option-set li a {text-shadow: 2px 2px #FFFF92;}
+ul.option-set li:hover a {text-shadow: 2px 2px #034D14;}
+ul.option-set li a.selected {text-shadow: 2px 2px #034D14;}
