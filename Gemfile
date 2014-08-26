@@ -10,7 +10,7 @@ gem 'haml-rails'
 gem 'colorbox-rails'
 
 gem "paperclip"
-gem 'ckeditor'
+gem 'ckeditor_rails'
 
 gem "friendly_id", "~> 5.0.1"
 gem 'jalalidate'

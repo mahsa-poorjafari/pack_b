@@ -15,7 +15,10 @@
       %tr
         %td= product.title
         %td= product.description
-        %td= product.category.title
+        
+        %td
+          - if product.category_id.present?
+            = product.category_id
         %td
           = link_to 'مشاهده', product
           \|
