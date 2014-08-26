@@ -4,8 +4,8 @@
     %b عنوان محصول:
     = @product.title
   %p
-    %b توضیحات:
-    = @product.description
+    
+    =raw @product.description
   
   - if @product.photos.present?
     - @product.photos.each do |pic|  
