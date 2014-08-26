@@ -29,8 +29,9 @@ GEM
     builder (3.1.4)
     checker (0.6.6)
       colorize (= 0.5.8)
-    ckeditor_rails (4.4.2)
-      railties (>= 3.0)
+    ckeditor (4.1.0)
+      mime-types
+      orm_adapter (~> 0.5.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.4)
@@ -83,6 +84,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.10.1)
     mysql2 (0.3.16)
+    orm_adapter (0.5.0)
     paperclip (4.2.0)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -167,7 +169,7 @@ PLATFORMS
 
 DEPENDENCIES
   checker
-  ckeditor_rails
+  ckeditor
   coffee-rails (~> 4.0.0)
   colorbox-rails
   friendly_id (~> 5.0.1)
