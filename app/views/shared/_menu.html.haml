@@ -11,9 +11,8 @@
       
     %li 
       = link_to t('contact'), '#contact'
-    -#  
-      %li
-        %a.external{href: "shortcodes.html"} Shortcodes
+    %li 
+      = link_to t('order_menu'), '#order'
       
 - else
   %ul#other-page-menu
@@ -25,4 +24,6 @@
       = link_to t('about'), Page
     %li{:class => ('active' if current_page?(pages_path))}
       = link_to t('contact'), Page
+    %li{:class => ('active' if current_page?(pages_path))}
+      = link_to t('order_menu'), Page
     

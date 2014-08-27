@@ -79,3 +79,22 @@
           =raw @contact.first.text
     / End Contact Form
 / End Contact Section
+
+#order.page.order-bg
+  .container
+    / Title Page
+    .row
+    
+      .title-page
+        %h2.title= t('set_order')
+        %h3.title-description شما می توانید محصول موردنیاز خود را بصورت آنلاین سفارش دهید.
+    / End Title Page
+    / Contact Form
+    .row{:class => I18n.locale}
+      .span7
+        = render 'shared/order_form'
+      .span3
+        .contact-details
+          
+    / End order Form
+/ End order Section

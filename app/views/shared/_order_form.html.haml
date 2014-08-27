@@ -1,4 +1,3 @@
-
 = form_for @message ||= Message.new, :html => {:class => "contact-form", :id => "contact-form"} do |f|
   - if @message.errors.any?
     #error_explanation
@@ -9,6 +8,7 @@
   -if flash[:SendMsg]        
     .alert.alert-success= flash[:SendMsg]
  
+  = text_field_tag :order, '1'
   %p.contact-name    
     
     = f.text_field :name, name: "name", placeholder: t('msg.name'), :id => "contact_name", :class => I18n.locale    
@@ -22,11 +22,11 @@
     
   %p.contact-message
     
-    = f.text_area :text, cols: "40", name: "text", placeholder:  t('msg.text'), rows: "15", :style => "resize:none", :id => "contact_message", :class => I18n.locale
+    = f.text_area :text, cols: "40", name: "text", placeholder:  t('order.text'), rows: "15", :style => "resize:none", :id => "contact_message", :class => I18n.locale
     
          
   %p.contact-submit{:class => I18n.locale}
-    = f.submit  t('msg.send'), :class=> "submit", :id => "contact-submit"
+    = f.submit  t('order.send'), :class=> "submit", :id => "contact-submit"
     
   #response
 :javascript   

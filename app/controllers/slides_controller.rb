@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class SlidesController < ApplicationController
   before_action :set_slide, only: [:show, :edit, :update, :destroy]
   before_filter :check_autentication
