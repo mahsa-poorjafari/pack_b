@@ -699,6 +699,8 @@ nav#menu #menu-nav li a:hover {
 #thumbs {
 	margin: 0;
 	padding: 0;	
+  height:100%
+  width:100%;
 }
 
 #thumbs li {
@@ -710,7 +712,7 @@ nav#menu #menu-nav li a:hover {
 	overflow: hidden;
 	margin-bottom: 30px;
 	cursor: pointer;
-  width:25%;
+  width:20%;
   margin:2%;
   text-align:center;
   border:#4D4D4D solid 2px;
