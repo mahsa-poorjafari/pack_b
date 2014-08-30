@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140730113354) do
+ActiveRecord::Schema.define(version: 20140830061534) do
 
   create_table "categories", force: true do |t|
     t.string   "title_en"
@@ -38,6 +38,19 @@ ActiveRecord::Schema.define(version: 20140730113354) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
+  create_table "licenses", force: true do |t|
+    t.string   "title_en"
+    t.string   "title_fa"
+    t.string   "text_en"
+    t.string   "text_fa"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
   create_table "messages", force: true do |t|
     t.string   "name"
     t.string   "email"
@@ -45,6 +58,7 @@ ActiveRecord::Schema.define(version: 20140730113354) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "message_type", default: false
   end
 
   create_table "pages", force: true do |t|
@@ -59,18 +73,6 @@ ActiveRecord::Schema.define(version: 20140730113354) do
   create_table "photos", force: true do |t|
     t.string   "description_fa"
     t.string   "description_en"
-    t.integer  "product_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-  end
-
-  create_table "pictures", force: true do |t|
-    t.string   "description_en"
-    t.string   "description_fa"
     t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"

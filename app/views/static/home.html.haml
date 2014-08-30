@@ -57,6 +57,12 @@
         %h2.title= @about.first.title
         %h3.title-description= raw @about.first.text
     / End Title Page
+    .row 
+      - License.all.each do |license|
+        .show-license
+          = image_tag license.image(:small)
+          %p= license.title
+        
 
 
 / Contact Section

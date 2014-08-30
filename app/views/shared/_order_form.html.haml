@@ -5,30 +5,30 @@
         - @message.errors.each do |attr, msg|
           %li= msg 
       
-  -if flash[:SendMsg]        
-    .alert.alert-success= flash[:SendMsg]
+  -if flash[:SendOrder]        
+    .alert.alert-success= flash[:SendOrder]
  
-  = text_field_tag :order, '1'
+  = f.hidden_field :message_type, :value => 1
   %p.contact-name    
     
-    = f.text_field :name, name: "name", placeholder: t('msg.name'), :id => "contact_name", :class => I18n.locale    
+    = f.text_field :name, placeholder: t('msg.name'), :id => "contact_name", :class => I18n.locale    
     
   %p.contact-email    
     
-    = f.text_field :email, name: "email", placeholder: t('msg.email') , :id => "contact_email", :class => I18n.locale
+    = f.text_field :email, placeholder: t('msg.email') , :id => "contact_email", :class => I18n.locale
     
   %p.contact-phone    
-    = f.text_field :phone_number, name: "phone_number", placeholder:  t('msg.phone')  , :id => "contact_name", :class => I18n.locale
+    = f.text_field :phone_number,placeholder:  t('msg.phone')  , :id => "contact_name", :class => I18n.locale
     
   %p.contact-message
     
-    = f.text_area :text, cols: "40", name: "text", placeholder:  t('order.text'), rows: "15", :style => "resize:none", :id => "contact_message", :class => I18n.locale
+    = f.text_area :text, cols: "40", placeholder:  t('order.text'), rows: "15", :style => "resize:none", :id => "contact_message", :class => I18n.locale
     
          
   %p.contact-submit{:class => I18n.locale}
     = f.submit  t('order.send'), :class=> "submit", :id => "contact-submit"
     
-  #response
+  
 :javascript   
   $(':submit').click(function(e) {
     $(':text.needed, textarea.needed').each(function() {

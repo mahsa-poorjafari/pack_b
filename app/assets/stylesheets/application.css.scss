@@ -54,7 +54,7 @@ box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 }
 .admin_menu h3 {text-align:center
 }
-.admin_menu:hover { height:200px; cursor:pointer}
+.admin_menu:hover { height:230px; cursor:pointer}
 .admin_menu ul{list-style-type:circle; text-align:right; padding-right:35px; }
 .admin_menu ul li a{color:#FFEC00;}
 .admin_menu ul li a:hover{color:#000;}
@@ -92,3 +92,5 @@ span.Necessary {color:#DE5E60;}
 ul.option-set li a {text-shadow: 2px 2px #FFFF92;}
 ul.option-set li:hover a {text-shadow: 2px 2px #034D14;}
 ul.option-set li a.selected {text-shadow: 2px 2px #034D14;}
+
+.show-license {float:left; width:20%; margin:2%; }

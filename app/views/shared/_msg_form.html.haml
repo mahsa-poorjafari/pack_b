@@ -1,4 +1,3 @@
-
 = form_for @message ||= Message.new, :html => {:class => "contact-form", :id => "contact-form"} do |f|
   - if @message.errors.any?
     #error_explanation
@@ -9,29 +8,26 @@
   -if flash[:SendMsg]        
     .alert.alert-success= flash[:SendMsg]
  
-  %p.contact-name    
+  %p.contact-name
+    = f.text_field :name,  placeholder: t('msg.name'), :id => "contact_name", :class => I18n.locale    
     
-    = f.text_field :name, name: "name", placeholder: t('msg.name'), :id => "contact_name", :class => I18n.locale    
-    
-  %p.contact-email    
-    
-    = f.text_field :email, name: "email", placeholder: t('msg.email') , :id => "contact_email", :class => I18n.locale
+  %p.contact-email
+    = f.text_field :email, placeholder: t('msg.email') , :id => "contact_email", :class => I18n.locale
     
   %p.contact-phone    
-    = f.text_field :phone_number, name: "phone_number", placeholder:  t('msg.phone')  , :id => "contact_name", :class => I18n.locale
+    = f.text_field :phone_number, placeholder:  t('msg.phone')  , :id => "contact_phone", :class => I18n.locale
     
-  %p.contact-message
-    
-    = f.text_area :text, cols: "40", name: "text", placeholder:  t('msg.text'), rows: "15", :style => "resize:none", :id => "contact_message", :class => I18n.locale
+  %p.contact-message    
+    = f.text_area :text, cols: "40", placeholder:  t('msg.text'), rows: "15", :style => "resize:none", :id => "contact_message", :class => I18n.locale
     
          
   %p.contact-submit{:class => I18n.locale}
     = f.submit  t('msg.send'), :class=> "submit", :id => "contact-submit"
     
-  #response
+  
 :javascript   
-  $(':submit').click(function(e) {
-    $(':text.needed, textarea.needed').each(function() {
+  $(':submit#contact-submit').click(function(e) {
+    $(':text#contact_name, :text#contact_email,:text#contact_phone, :textarea#contact_message').each(function() {
       if ($(this).val().length == 0) {
         $(this).css('border', '2px solid red');
         e.preventDefault();

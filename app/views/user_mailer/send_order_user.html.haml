@@ -1,0 +1,13 @@
+%h1= 'ارسال سفارش توسط کاربر از طریق سایت'
+%h3
+  = @message.email
+  = @message.name
+  = @message.phone_number
+  
+%br
+%h4
+  = @message.text
+  %b
+    تاریخ ارسال
+    = JalaliDate.new(@message.created_at).strftime("%y/%m/%e %X")
+  

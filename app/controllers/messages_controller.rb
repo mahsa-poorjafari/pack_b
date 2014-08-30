@@ -28,11 +28,14 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     
     if @message.save
-      if params[:order].present?      
-        flash[:notice] = 'کاربر گرامی سفارش شما ثبت شد.'
-      else      
-        flash[:notice] = 'کاربر گرامی پیام شما ارسال گردید.'
+      if @message.message_type
+        UserMailer.send_order_user.deliver
+        flash[:SendOrder] = 'کاربر گرامی سفارش شما ثبت شد.'
+      else 
+        UserMailer.send_msg_user.deliver
+        flash[:SendMsg] = 'کاربر گرامی پیام شما ارسال گردید.'
       end
+      redirect_to :back
     end
     
   end
@@ -69,6 +72,6 @@ class MessagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def message_params
-      params.require(:message).permit(:name, :email, :phone_number, :text)
+      params.require(:message).permit(:name, :email, :phone_number, :text, :message_type)
     end
 end
