@@ -32,9 +32,9 @@ class MessagesController < ApplicationController
       if @message.message_type == true        
         flash[:SendOrder] = 'کاربر گرامی سفارش شما ثبت شد.'
         UserMailer.send_order_user.deliver
-      else 
-        
+      else         
         flash[:SendMsg] = 'کاربر گرامی پیام شما ارسال گردید.'
+        UserMailer.send_msg_user.deliver
       end
       redirect_to :back
     end
