@@ -1,0 +1,19 @@
+%div{:style => "direction:rtl"}  
+  %h1= 'ارسال سفارش توسط کاربر از طریق سایت'
+  %h3= 'اطلاعات کاربر'
+  %p
+    %b ایمیل:
+    = @message.email
+    %b نام کاربر
+    = @message.name
+    %b تلفن تماس
+    = @message.phone_number
+    
+  %br
+  %h4
+    %b متن سفارش
+    = @message.text
+    %b
+      تاریخ ارسال
+      = JalaliDate.new(@message.created_at).strftime("%y/%m/%e %X")
+    

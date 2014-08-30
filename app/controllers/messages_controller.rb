@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
 
@@ -23,18 +24,21 @@ class MessagesController < ApplicationController
 
   # POST /messages
   # POST /messages.json
-  def create
+  def create    
     @message = Message.new(message_params)
-
-    respond_to do |format|
-      if @message.save
-        format.html { redirect_to @message, notice: 'Message was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @message }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @message.errors, status: :unprocessable_entity }
+    p '1111111111111111'
+    if @message.save
+      
+      if @message.message_type == true        
+        flash[:SendOrder] = 'کاربر گرامی سفارش شما ثبت شد.'
+        UserMailer.send_order_user.deliver
+      else         
+        flash[:SendMsg] = 'کاربر گرامی پیام شما ارسال گردید.'
+        UserMailer.send_msg_user.deliver
       end
+      redirect_to :back
     end
+    
   end
 
   # PATCH/PUT /messages/1
@@ -69,6 +73,6 @@ class MessagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def message_params
-      params.require(:message).permit(:name, :email, :phone_number, :text)
+      params.require(:message).permit(:name, :email, :phone_number, :text, :message_type)
     end
 end

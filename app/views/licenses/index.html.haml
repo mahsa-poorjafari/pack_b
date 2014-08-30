@@ -1,0 +1,26 @@
+.fa.other-page{:style => "height:90%;"}
+  %h1 لیست مجوزها و پروانه ها
+  - if is_admin?
+    = link_to 'مجوز یا پروانه جدید', new_license_path, :class => "btn btn-default" 
+  
+
+  %table
+    %tr
+      
+      %th عنوان
+      %th تصویر      
+      %th توضیحات      
+      %th
+
+    - @licenses.each do |license|
+      %tr
+        %td= license.title        
+        %td= image_tag license.image(:small)
+        %td= license.text        
+        %td
+          = link_to 'مشاهده', license
+          \|          
+          = link_to 'ویرایش', edit_license_path(license)
+          \|
+          = link_to 'حذف', license, :method => :delete, :data => { :confirm => 'Are you sure?' }
+

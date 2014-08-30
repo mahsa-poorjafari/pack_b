@@ -1,15 +1,16 @@
 PackB::Application.routes.draw do
-
   resources :photos
 
   scope "(:locale)", :locale => /en|fa/ do  
     resources :pictures
+    resources :user_messages
 
     resources :messages
 
     resources :categories
     
     resources :products
+    resources :licenses
 
     resources :slides
 
@@ -21,6 +22,7 @@ PackB::Application.routes.draw do
   
   root :to => 'static#home'
   get "login" => "users#login"  
+  get "googlebc5f5c16062b24b0" => "static#googlebc5f5c16062b24b0"  
   post "create_session" => "users#create_session", :as => :create_session
   get "delete_session" => "users#delete_session", :as => :delete_session
 

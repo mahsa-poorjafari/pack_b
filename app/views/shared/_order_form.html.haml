@@ -1,0 +1,40 @@
+= form_for @message ||= Message.new, :html => {:class => "contact-form", :id => "contact-form"} do |f|
+  - if @message.errors.any?
+    #error_explanation
+      %ul
+        - @message.errors.each do |attr, msg|
+          %li= msg 
+      
+  -if flash[:SendOrder]        
+    .alert.alert-success= flash[:SendOrder]
+ 
+  = f.hidden_field :message_type, :value => 1
+  %p.contact-name    
+    
+    = f.text_field :name, placeholder: t('msg.name'), :id => "contact_name", :class => I18n.locale    
+    
+  %p.contact-email    
+    
+    = f.text_field :email, placeholder: t('msg.email') , :id => "contact_email", :class => I18n.locale
+    
+  %p.contact-phone    
+    = f.text_field :phone_number,placeholder:  t('msg.phone')  , :id => "contact_name", :class => I18n.locale
+    
+  %p.contact-message
+    
+    = f.text_area :text, cols: "40", placeholder:  t('order.text'), rows: "15", :style => "resize:none", :id => "contact_message", :class => I18n.locale
+    
+         
+  %p.contact-submit{:class => I18n.locale}
+    = f.submit  t('order.send'), :class=> "submit", :id => "contact-submit"
+    
+  
+:javascript   
+  $(':submit').click(function(e) {
+    $(':text.needed, textarea.needed').each(function() {
+      if ($(this).val().length == 0) {
+        $(this).css('border', '2px solid red');
+        e.preventDefault();
+      }
+    });
+  });

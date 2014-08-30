@@ -1,4 +1,4 @@
-.page.fa.other-page{:style => "height:100%"}
+.fa.other-page{:style => "height:90%;"}
   - if is_admin?
     = link_to 'محصول جدید', new_product_path, :class => "btn btn-default"
   %h1 لیست محصولات
@@ -6,7 +6,7 @@
   %table
     %tr
       %th عنوان
-      %th توضیحات
+      
       %th گروه مربوطه
       %th
       %th
@@ -14,11 +14,16 @@
     - @products.each do |product|
       %tr
         %td= product.title
-        %td= product.description
-        %td= product.category.title
+        
+        
+        %td
+          - if product.category_id.present?
+            = product.category.title
         %td
           = link_to 'مشاهده', product
+          \|
           = link_to 'ویرایش', edit_product_path(product)
+          \|
           = link_to 'حذف', product, :method => :delete, :data => { :confirm => 'آیا مطمئن هستید؟' }
 
   %br

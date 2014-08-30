@@ -27,7 +27,9 @@ en:
   work: 'OUR WORK'
   about: 'ABOUT US'
   contact: 'CONTACT US'
+  order_menu: 'ORDER'
   Get_in_Touch: 'Get in Touch'
+  set_order: 'Set Your Order'
   Contact_Details: 'Contact Details'
   
   our_work: 'Our Work'
@@ -41,7 +43,9 @@ en:
     phone: 'Your Phone Number'
     text: 'Your Message'
     send: 'SEND'
-  
+  order:
+    text: 'Your Order'
+    send: 'Set Order'
   ckeditor:
     page_title: 'CKEditor Files Manager1'
     confirm_delete: 'Delete file?1'

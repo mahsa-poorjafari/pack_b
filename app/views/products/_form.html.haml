@@ -16,10 +16,10 @@
     = f.text_field :title
   .field
     = f.label 'توضیحات به فارسی:'
-    = f.text_field :description_fa
+    = f.text_area :description_fa, :class => "ckeditor"
   .field
     = f.label 'توضیحات به انگلیسی:'
-    = f.text_area :description
+    = f.text_area :description, :class => "ckeditor"
     
   .actions
     = f.submit 'ثبت', :class => "btn btn-default"

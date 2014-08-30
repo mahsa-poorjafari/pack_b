@@ -1,6 +1,6 @@
 # encoding: UTF-8
 class Photo < ActiveRecord::Base
-  belongs_to :product
+  belongs_to :product  
   
   has_attached_file :image, :styles => { :original => "500x500>" , :medium => "300x300>", :small => "320x270>" }
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"],

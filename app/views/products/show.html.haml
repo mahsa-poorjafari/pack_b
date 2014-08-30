@@ -1,18 +1,17 @@
-.page.fa
-  .other-page 
-    %p#notice= notice
-    %p
-      %b عنوان محصول:
-      = @product.title
-    %p
-      %b توضیحات:
-      = @product.description
+.fa.other-page 
+  %p#notice= notice
+  %p
+    %b عنوان محصول:
+    = @product.title
+  %p
     
-    - if @product.photos.present?
-      - @product.photos.each do |pic|  
-        %div=image_tag pic.image(:small)
-        
-    - if is_admin?
-      = link_to 'ویرایش', edit_product_path(@product)
-      \|
-      = link_to 'بازگشت', :back
+    =raw @product.description
+  
+  - if @product.photos.present?
+    - @product.photos.each do |pic|  
+      %div=image_tag pic.image(:small)
+      
+  - if is_admin?
+    = link_to 'ویرایش', edit_product_path(@product)
+    \|
+    = link_to 'بازگشت', :back

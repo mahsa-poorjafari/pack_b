@@ -11,11 +11,11 @@
   .field
     = f.label 'عنوان به فارسی:'
     = f.text_field :title_fa
-  .field
+  .field.editor
     = f.label 'متن به فارسی:'
-    = f.cktext_area :text
-  .field
+    = f.cktext_area :text, :class => "form-control ckeditor"
+  .field.editor
     = f.label 'متن به انگلیسی:'
-    = f.cktext_area :text_fa
+    = f.cktext_area :text_fa, :class => "form-control ckeditor"
   .actions
-    = f.submit 'Save'
+    = f.submit 'ثبت', :class => "btn btn-default"
