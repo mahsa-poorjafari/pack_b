@@ -26,13 +26,14 @@ class MessagesController < ApplicationController
   # POST /messages.json
   def create    
     @message = Message.new(message_params)
-    
+    p '1111111111111111'
     if @message.save
-      if @message.message_type
-        UserMailer.send_order_user.deliver
+      
+      if @message.message_type == true        
         flash[:SendOrder] = 'کاربر گرامی سفارش شما ثبت شد.'
+        UserMailer.send_order_user.deliver
       else 
-        UserMailer.send_msg_user.deliver
+        
         flash[:SendMsg] = 'کاربر گرامی پیام شما ارسال گردید.'
       end
       redirect_to :back
