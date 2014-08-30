@@ -5,4 +5,7 @@ class StaticController < ApplicationController
     @contact = Page.where(title: "Contact us")
     
   end
+  def googlebc5f5c16062b24b0
+  
+  end
 end
