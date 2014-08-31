@@ -33,15 +33,16 @@
                 - category.products.each do |product|
                   %li.item-thumbs{:class => "item" + category.id.to_s}
                     / Fancybox - Gallery Enabled - Title - Full Image                    
-                    = link_to product, :class => "hover-wrap", "data-fancybox-group" => "gallery" do                
+                    = link_to product , :class => "hover-wrap", :remote => true do                
                       %span.overlay-img
                       %span.overlay-img-thumb.font-icon-plus
                     / Thumb Image and Description
                     - if product.photos.present?
                       = image_tag product.photos.first.image(:small)
                       %span.pro-title= product.title
-                  
-              / End Item Project
+      #show-details{:class => I18n.locale}
+        = image_tag ''
+        show details with ajax
                 
               
     / End Portfolio Projects
@@ -56,12 +57,14 @@
       .title-page
         %h2.title= @about.first.title
         %h3.title-description= raw @about.first.text
+      
     / End Title Page
     .row 
       - License.all.each do |license|
         .show-license
           = image_tag license.image(:small)
           %p= license.title
+    
         
 
 
@@ -82,7 +85,14 @@
       .span3
         .contact-details
           %h3= t('Contact_Details')
-          =raw @contact.first.text
+          =raw @contact.first.text    
+    
+        .ahoy
+          = t('visit_site')
+          = Visit.all.count
+          نفر
+          -#
+            = line_chart Visit.group_by_day(:browser).count
     / End Contact Form
 / End Contact Section
 
@@ -104,3 +114,8 @@
           
     / End order Form
 / End order Section
+
+
+
+
+  

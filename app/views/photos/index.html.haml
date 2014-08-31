@@ -14,7 +14,7 @@
       %tr
         %td= photo.description_fa
         %td= photo.description_en
-        %td= photo.product.title
+        %td= photo.product_id
         %td= link_to 'Show', photo
         %td= link_to 'ویرایش', edit_photo_path(photo)
         %td= link_to 'حذف', photo, :method => :delete, :data => { :confirm => 'آیا مطمئن هستید؟' }

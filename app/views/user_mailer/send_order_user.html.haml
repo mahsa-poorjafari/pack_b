@@ -4,16 +4,19 @@
   %p
     %b ایمیل:
     = @message.email
-    %b نام کاربر
+  %p
+    %b نام کاربر:
     = @message.name
-    %b تلفن تماس
+  %p
+    %b تلفن تماس:
     = @message.phone_number
     
   %br
   %h4
-    %b متن سفارش
+    %b متن سفارش:
     = @message.text
+  %p
     %b
-      تاریخ ارسال
-      = JalaliDate.new(@message.created_at).strftime("%y/%m/%e %X")
+      تاریخ ارسال:
+    = JalaliDate.new(@message.created_at).strftime("%y/%m/%e %X")
     

@@ -94,3 +94,9 @@ ul.option-set li:hover a {text-shadow: 2px 2px #034D14;}
 ul.option-set li a.selected {text-shadow: 2px 2px #034D14;}
 
 .show-license {float:left; width:20%; margin:2%; }
+
+/* show products details  with ajax */
+#show-details{width:80%; height:100%; z-index:100; left:1%; position:absolute; background:#1A1A1A; opacity:.7; display:none; border-radius:5px; color:#FBFBA8;
+padding:1%;
+}
+.pro-pic {float:right; margin:2%; }

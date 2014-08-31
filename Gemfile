@@ -16,6 +16,9 @@ gem "friendly_id", "~> 5.0.1"
 gem 'jalalidate'
 gem "twitter-bootstrap-rails"
 gem 'i18n'
+gem 'ahoy_matey'
+
+
 group :production do
   gem 'mysql2'
 end

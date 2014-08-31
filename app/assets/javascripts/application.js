@@ -12,6 +12,8 @@
 //
 //= require placeholder
 //= require jquery
+//= require ahoy
+//= require chartkick
 //= require jquery_ujs
 //= require turbolinks
 //= require ckeditor/init
@@ -26,3 +28,4 @@
 //= require jquery.tweet
 //= require plugins
 //= require main
+//= require show_ajax
