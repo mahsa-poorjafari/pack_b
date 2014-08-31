@@ -13,7 +13,6 @@
 //= require placeholder
 //= require jquery
 //= require ahoy
-//= require chartkick
 //= require jquery_ujs
 //= require turbolinks
 //= require ckeditor/init
