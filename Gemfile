@@ -17,6 +17,7 @@ gem 'jalalidate'
 gem "twitter-bootstrap-rails"
 gem 'i18n'
 gem 'ahoy_matey'
+gem "activeuuid"
 
 
 group :production do
