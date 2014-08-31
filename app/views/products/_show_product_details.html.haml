@@ -1,12 +1,12 @@
 #show-details{:class => I18n.locale}
   = image_tag 'gtk_close.png', :class => "close"
-  .pull-right{:style => "width:40%"}
+  .pull-right.pro-text
     %p
       %b عنوان محصول:
       = @product.title
     %div  
       =raw @product.description
-  .pull-left
+  .pull-left.pro-pic
   - if @product.photos.present?
     - @product.photos.each do |pic|  
       %div=image_tag pic.image(:small)
