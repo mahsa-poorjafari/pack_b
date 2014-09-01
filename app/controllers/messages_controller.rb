@@ -39,7 +39,7 @@ class MessagesController < ApplicationController
     else
       
       flash[:MsgError]= 'ایمیل نامعتبر است'
-      redirect_to root_path(:anchor => "#contact")
+      redirect_to root_path
     end
     
   end
