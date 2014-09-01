@@ -1,32 +1,33 @@
 = form_for @message ||= Message.new, :html => {:class => "contact-form", :id => "contact-form"} do |f|
   - if @message.errors.any?
-    #error_explanation
+    .alert.alert-danger
       %ul
         - @message.errors.each do |attr, msg|
           %li= msg 
       
   -if flash[:SendOrder]        
     .alert.alert-success= flash[:SendOrder]
- 
+  -if flash[:MsgError]        
+    .alert.alert-danger= flash[:MsgError]
   = f.hidden_field :message_type, :value => 1
   %p.contact-name    
     
-    = f.text_field :name, placeholder: t('msg.name'), :id => "contact_name", :class => I18n.locale    
+    = f.text_field :name, placeholder: t('msg.name'), :id => "order_name", :class => I18n.locale    
     
   %p.contact-email    
     
-    = f.text_field :email, placeholder: t('msg.email') , :id => "contact_email", :class => I18n.locale
+    = f.email_field :email, placeholder: t('msg.email') , :id => "order_email", :class => I18n.locale
     
   %p.contact-phone    
-    = f.text_field :phone_number,placeholder:  t('msg.phone')  , :id => "contact_name", :class => I18n.locale
+    = f.text_field :phone_number,placeholder:  t('msg.phone')  , :id => "order_phone", :class => I18n.locale
     
   %p.contact-message
     
-    = f.text_area :text, cols: "40", placeholder:  t('order.text'), rows: "15", :style => "resize:none", :id => "contact_message", :class => I18n.locale
+    = f.text_area :text, cols: "40", placeholder:  t('order.text'), rows: "15", :style => "resize:none", :id => "order_message", :class => I18n.locale
     
          
   %p.contact-submit{:class => I18n.locale}
-    = f.submit  t('order.send'), :class=> "submit", :id => "contact-submit"
+    = f.submit  t('order.send'), :class=> "submit", :id => "order-submit"
     
   
 :javascript   

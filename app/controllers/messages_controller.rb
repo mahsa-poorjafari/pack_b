@@ -27,16 +27,19 @@ class MessagesController < ApplicationController
   def create    
     @message = Message.new(message_params)
     p '1111111111111111'
-    if @message.save
-      
+    if @message.save      
       if @message.message_type == true        
         flash[:SendOrder] = 'کاربر گرامی سفارش شما ثبت شد.'
         UserMailer.send_order_user.deliver
       else         
         flash[:SendMsg] = 'کاربر گرامی پیام شما ارسال گردید.'
         UserMailer.send_msg_user.deliver
-      end
-      redirect_to :back
+      end      
+      redirect_to root_path
+    else
+      
+      flash[:MsgError]= 'ایمیل نامعتبر است'
+      redirect_to root_path(:anchor => "#contact")
     end
     
   end

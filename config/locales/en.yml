@@ -24,7 +24,7 @@ en:
   kimiakaran: 'KIMIA KARAN'
   
   home: 'HOME'
-  work: 'OUR WORK'
+  work: 'OUR PRODUCTS'
   about: 'ABOUT US'
   contact: 'CONTACT US'
   order_menu: 'ORDER'
@@ -32,8 +32,8 @@ en:
   set_order: 'Set Your Order'
   Contact_Details: 'Contact Details'
   
-  our_work: 'KimiaKaran Work'
-  type_of_work: 'Type Of KimiaKaran Work'
+  our_work: 'KimiaKaran Product'
+  type_of_work: 'Type Of KimiaKaran Product'
   All_Projects: 'All Projects'
   visit_site: 'Visited'
   

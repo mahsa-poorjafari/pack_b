@@ -1,5 +1,6 @@
 = form_for @message ||= Message.new, :html => {:class => "contact-form", :id => "contact-form"} do |f|
   - if @message.errors.any?
+    
     #error_explanation
       %ul
         - @message.errors.each do |attr, msg|
@@ -7,6 +8,8 @@
       
   -if flash[:SendMsg]        
     .alert.alert-success= flash[:SendMsg]
+  -if flash[:MsgError]        
+    .alert.alert-danger= flash[:MsgError]
  
   %p.contact-name
     = f.text_field :name,  placeholder: t('msg.name'), :id => "contact_name", :class => I18n.locale    
@@ -24,13 +27,4 @@
   %p.contact-submit{:class => I18n.locale}
     = f.submit  t('msg.send'), :class=> "submit", :id => "contact-submit"
     
-  
-:javascript   
-  $(':submit#contact-submit').click(function(e) {
-    $(':text#contact_name, :text#contact_email,:text#contact_phone, :textarea#contact_message').each(function() {
-      if ($(this).val().length == 0) {
-        $(this).css('border', '2px solid red');
-        e.preventDefault();
-      }
-    });
-  });
+
