@@ -19,7 +19,7 @@
             
             - @categories.each do |category|
               %li                
-                = link_to category.title, "#filter", "data-option-value" => ".item#{category.id}", :title => "کیمیاکاران"
+                = link_to category.title, "#filter", "data-option-value" => ".item#{category.id}", :title => category.title
                 
                     
               
