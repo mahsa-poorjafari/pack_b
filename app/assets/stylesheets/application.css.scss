@@ -104,8 +104,8 @@ ul.option-set li a.selected {text-shadow: 2px 2px #034D14;}
   background:#1A1A1A; opacity:.7; display:none; border-radius:5px; color:#FBFBA8;
   padding:1%;
 }
-#show-details .pro-text {width:60%; overflow:hidden; height:100%; line-height:1.5em}
-#show-details .pro-text h1{color:#FFA500;}
+#show-details .pro-text {width:60%; overflow:hidden; height:100%; line-height:1.5em; text-align:justify}
+#show-details .pro-text h1, h2, h3, h4{color:#FFA500;}
 #show-details .pro-text:hover {width:60%; overflow-y:scroll}
 #show-details .pro-pic { width:25%; margin-right:2% }
 .fancybox-title h4 {color:#F6F6A8;}
