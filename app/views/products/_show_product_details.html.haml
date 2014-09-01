@@ -9,5 +9,5 @@
   .pull-left.pro-pic
   - if @product.photos.present?
     - @product.photos.each do |pic|  
-      %div=image_tag pic.image(:small), :alt => pic.image_file_name, :title => pic.image_file_name, 
+      %div=image_tag pic.image(:small), :alt => pic.image_file_name, :title => pic.image_file_name
   .clear-float
