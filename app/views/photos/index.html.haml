@@ -4,20 +4,24 @@
     = link_to 'تصویر جدید', new_photo_path, :class => "btn btn-default"
   %table
     %tr            
+      %th ردیف
       %th توضیحات
       %th محصول مربوطه
-      %th
-      %th
-      %th
+      %th عملیات
+      
 
-    - @photos.each do |photo|
-      %tr
-        %td= photo.description_fa
-        %td= photo.description_en
-        %td= photo.product_id
-        %td= link_to 'Show', photo
-        %td= link_to 'ویرایش', edit_photo_path(photo)
-        %td= link_to 'حذف', photo, :method => :delete, :data => { :confirm => 'آیا مطمئن هستید؟' }
+    - @photos.each_with_index do |photo, i|
+      %tr      
+        %td= (i+1)
+        %td= photo.description        
+        %td= photo.product.title
+        %td
+          - if is_admin?
+            = link_to 'مشاهده', photo
+            \|
+            = link_to 'ویرایش', edit_photo_path(photo)
+            \|
+            = link_to 'حذف', photo, :method => :delete, :data => { :confirm => 'آیا مطمئن هستید؟' }
 
 
 
