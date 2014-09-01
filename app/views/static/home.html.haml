@@ -59,11 +59,15 @@
       
     / End Title Page
     .row 
-      - License.all.each do |license|
-        .show-license
-          = image_tag license.image(:small), :alt => "مجوز و پروانه کیمیاکاران", :title => "مجوز و پروانه کیمیاکاران"
-          %p= license.title
-    
+      %ul#thumbs
+        - License.all.each do |license|
+          %li.item-thumbs    
+            = link_to license.image(:medium), :class => "hover-wrap fancybox", "data-fancybox-group" => "gallery", :title => license.title do
+              %span.overlay-img
+              %span.overlay-img-thumb.font-icon-plus
+            = image_tag license.image(:small), :alt => "مجوز و پروانه کیمیاکاران", :title => "مجوز و پروانه کیمیاکاران"
+            %p= license.title
+      
         
 
 
