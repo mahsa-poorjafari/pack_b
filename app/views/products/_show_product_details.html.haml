@@ -1,5 +1,5 @@
 #show-details{:class => I18n.locale}
-  = image_tag 'gtk_close.png', :class => "close"
+  = image_tag 'kimiakaran.png', :class => "close", :alt => "کیمیاکاران", :title => "کیمیاکاران"
   .pull-right.pro-text
     %p
       %b عنوان محصول:
@@ -9,5 +9,5 @@
   .pull-left.pro-pic
   - if @product.photos.present?
     - @product.photos.each do |pic|  
-      %div=image_tag pic.image(:small)
+      %div=image_tag pic.image(:small), :alt => pic.image_file_name, :title => pic.image_file_name, 
   .clear-float

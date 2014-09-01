@@ -19,7 +19,7 @@
             
             - @categories.each do |category|
               %li                
-                = link_to category.title, "#filter", "data-option-value" => ".item#{category.id}"
+                = link_to category.title, "#filter", "data-option-value" => ".item#{category.id}", :title => "کیمیاکاران"
                 
                     
               
@@ -33,15 +33,14 @@
                 - category.products.each do |product|
                   %li.item-thumbs{:class => "item" + category.id.to_s}
                     / Fancybox - Gallery Enabled - Title - Full Image                    
-                    = link_to product , :class => "hover-wrap", :remote => true do                
+                    = link_to product , :class => "hover-wrap", :title => "کیمیاکاران", :remote => true do                
                       %span.overlay-img
                       %span.overlay-img-thumb.font-icon-plus
                     / Thumb Image and Description
                     - if product.photos.present?
-                      = image_tag product.photos.first.image(:small)
+                      = image_tag product.photos.first.image(:small), :alt => product.photos.first.image_file_name, :title => product.photos.first.image_file_name
                       %span.pro-title= product.title
-      #show-details{:class => I18n.locale}
-        = image_tag ''
+      #show-details{:class => I18n.locale}        
         show details with ajax
                 
               
@@ -62,7 +61,7 @@
     .row 
       - License.all.each do |license|
         .show-license
-          = image_tag license.image(:small)
+          = image_tag license.image(:small), :alt => "مجوز و پروانه کیمیاکاران", :title => "مجوز و پروانه کیمیاکاران"
           %p= license.title
     
         
@@ -103,7 +102,7 @@
     
       .title-page
         %h2.title= t('set_order')
-        %h3.title-description شما می توانید محصول موردنیاز خود را بصورت آنلاین سفارش دهید.
+        %h3.title-description  محصول موردنیاز خود را بصورت آنلاین سفارش دهید.
     / End Title Page
     / Contact Form
     .row{:class => I18n.locale}
