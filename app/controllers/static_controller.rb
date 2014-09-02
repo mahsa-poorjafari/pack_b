@@ -8,4 +8,9 @@ class StaticController < ApplicationController
   def googlebc5f5c16062b24b0
   
   end
+  def sitemap
+    respond_to do |format|
+      format.xml
+    end
+  end
 end
