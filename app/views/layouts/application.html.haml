@@ -49,7 +49,8 @@
       .sticky-nav
         %a#mobile-nav.menu-nav{href: "#menu-nav"}
         #logo
-          %a#goUp{href: "#home-slider", title: "KIMIA KARAN "} KIMIA KARAN
+          %a#goUp{href: "#home-slider", title: "KIMIA KARAN "}
+            =t('kimiakaran')
         - if is_admin?
           .admin_menu.fa
             %h3= 'منوی مدیرسایت'
@@ -58,7 +59,7 @@
           = form_tag "http://google.com/search", method: "get",  :target=> "_blank", :class => "contact-form", :id => "contact-form" do   
             %p.contact-name
               .google-field= text_field_tag :q, '', placeholder: t('Google_Search'), :id => "contact_name", :class => I18n.locale    
-              .google-submit= submit_tag  "جستجو", :name => "sa", :id => "search-submit" , :class => I18n.locale    
+              .google-submit= submit_tag  t('submit_search'), :name => "sa", :id => "search-submit" , :class => I18n.locale    
               .clear-float
         %nav#menu
           = render 'shared/menu'

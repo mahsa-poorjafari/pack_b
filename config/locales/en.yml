@@ -32,6 +32,8 @@ en:
   set_order: 'Set Your Order'
   Contact_Details: 'Contact Details'
   Google_Search: 'Google Search'
+  submit_search: 'Search'
+  
   our_work: 'KimiaKaran Product'
   type_of_work: 'Type Of KimiaKaran Product'
   All_Projects: 'All Projects'

@@ -21,7 +21,7 @@
 
 fa:
 
-  kimiakaran: 'کیمیا کاران'
+  kimiakaran: 'کیمیاکاران'
   home: 'صفحه اصلی'
   work: 'محصولات '
   about: 'درباره کیمیاکاران'
@@ -32,6 +32,7 @@ fa:
   Contact_Details: 'جزئیات تماس'
   visit_site: 'آمار بازدید'
   Google_Search: 'جستجو در گوگل'
+  submit_search: 'جستجو'
   msg:
     name: 'نام خود را وارد کنید.'
     email: 'ایمیل خود را وارد کنید.'
