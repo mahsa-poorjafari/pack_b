@@ -31,6 +31,7 @@ fa:
   set_order: 'سفارش خود را ثبت کنید'
   Contact_Details: 'جزئیات تماس'
   visit_site: 'آمار بازدید'
+  Google_Search: 'جستجو در گوگل'
   msg:
     name: 'نام خود را وارد کنید.'
     email: 'ایمیل خود را وارد کنید.'
