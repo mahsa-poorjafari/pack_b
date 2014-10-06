@@ -68,7 +68,7 @@ strong {
 }
 
 p {
-	margin: 0 0 30px;
+	margin: 0 0 5px;
 }
 
 hr {
@@ -637,21 +637,23 @@ nav#menu #menu-nav li a:hover {
 
 .page-alternate {
 	background: #4A7D47;
-	padding: 100px 0;
+	padding: 50px 0;
 	position: relative;
 	z-index: 99;
 }
 
 .title-page {
-	text-align: center;
+	
 	margin-bottom: 100px;	
 }
 
 .title-page .title {
 	font-size: 48px;
-	margin: 0 0 10px 0
+	margin: 0 0 10px 0;
+  text-align:center;
 }
-
+.title-page h3, .title-page h2 {text-align:center}
+.title-page p {font-size:18px; color:#0C3A17; text-align:justify; line-height: 25px;}
 .title-page .title-description {
 	font-size: 24px;
 	font-weight: 200;

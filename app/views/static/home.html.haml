@@ -41,7 +41,7 @@
                       = image_tag product.photos.first.image(:small), :alt => product.photos.first.image_file_name, :title => product.photos.first.image_file_name
                       %span.pro-title= product.title
            
-          
+      
       #show-details{:class => I18n.locale}        
         کیمیاکاران تولید کننده نمونه اسید سولفوریک
                 
@@ -51,13 +51,13 @@
 
 
 / About Section
-#about.page-alternate{:style => "height:50%"}
+#about.page-alternate
   .container
     / Title Page
     .row      
-      .title-page
+      .title-page{:class => I18n.locale}
         %h2.title= @about.first.title
-        %h3.title-description= raw @about.first.text
+        .title-description= raw @about.first.text
       
     / End Title Page
     .row 
@@ -79,7 +79,7 @@
     / Title Page
     .row
     
-      .title-page
+      .title-page{:class => I18n.locale}
         %h2.title= t('Get_in_Touch')
         %h3.title-description شما میتوانید از طریق ایمیل یا  تلفن با ما در ارتباط باشید
     / End Title Page
@@ -87,7 +87,7 @@
     .row{:class => I18n.locale}
       .span7
         = render 'shared/msg_form'
-      .span3
+      .span4
         .contact-details
           %h3= t('Contact_Details')
           =raw @contact.first.text    
