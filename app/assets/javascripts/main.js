@@ -78,7 +78,7 @@ BRUSHED.slider = function(){
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 
 		slides 					:  	window.user_slides,
-
+    
 									
 		// Theme Options			   
 		progress_bar			:	0,			// Timer for each slide							
@@ -389,6 +389,7 @@ $(document).ready(function(){
 	]);
 	
 	// Preload the page with jPreLoader
+  /*
 	$('body').jpreLoader({
 		splashID: "#jSplash",
 		showSplash: true,
@@ -398,6 +399,7 @@ $(document).ready(function(){
 			$('#circle').delay(250).animate({'opacity' : 1}, 500, 'linear');
 		}
 	});
+  */ 
 	
 	BRUSHED.nav();
 	BRUSHED.mobileNav();

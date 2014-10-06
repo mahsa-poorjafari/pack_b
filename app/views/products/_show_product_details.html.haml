@@ -2,7 +2,7 @@
   = image_tag 'kimiakaran.png', :class => "close", :alt => "کیمیاکاران", :title => "کیمیاکاران"
   .pull-right.pro-text.nano-content
     %p
-      %b عنوان محصول:
+      %b= t('pro_title')
       = @product.title
     %div  
       =raw @product.description

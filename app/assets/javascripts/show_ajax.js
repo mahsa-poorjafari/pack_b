@@ -1,10 +1,10 @@
 $('html').click(function() {
   $('#show-details').fadeOut(1000);
-  $('.project-pic').fadeIn(500);
+  $('.project-pic').fadeIn(100);
 });
 $('#show-details img.close').click(function() {
   $('#show-details').fadeOut(1000);
-  $('.project-pic').fadeIn(500);
+  $('.project-pic').fadeIn(100);
 });
 
 $('#show-details').click(function(event){

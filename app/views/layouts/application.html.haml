@@ -14,11 +14,7 @@
     = yield(:refresh_meta) if content_for?(:refresh_meta)
 
   %body{:class => I18n.locale}
-    / This section is for Splash Screen
-    .ole
-      %section#jSplash
-        #circle
-    / End of Splash Screen 
+    
     / Homepage Slider
     
     :javascript
@@ -27,9 +23,9 @@
       $('ul#supersized li img').css('width', '100%');
     #home-slider.en
       .overlay        
-      .slider-text
-        #slidecaption{:class => I18n.locale}= t('kimiakaran')
-          
+      -#
+        = render 'slides/slider'
+      
       .control-nav
         = link_to '#' , :class => "load-item", :id => "prevslide" do    
           %i.font-icon-arrow-simple-left
