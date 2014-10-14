@@ -14,11 +14,23 @@ BRUSHED.mobileNav = function(){
 		if( $('#mobile-nav').length > 0 ) {
 			mobileMenuClone.insertAfter('#menu');
 			$('#navigation-mobile #menu-nav').attr('id', 'menu-nav-mobile');
+      $('#menu').css('display', 'none');
+      $('.google_site_map').addClass('span4');
+      $('.google_site_map').removeClass('span8');
+      $('.contact_information').addClass('span4');
+      $('.contact_information').removeClass('span8');
+      
 		}
 	} else {
 		$('#navigation-mobile').css('display', 'none');
+    $('#menu').css('display', 'block');
+    $('.google_site_map').addClass('span8');
+    $('.google_site_map').removeClass('span4');
+    $('.contact_information').addClass('span8');
+    $('.contact_information').removeClass('span4');
 		if ($('#mobile-nav').hasClass('open')) {
 			$('#mobile-nav').removeClass('open');	
+      
 		}
 	}
 }

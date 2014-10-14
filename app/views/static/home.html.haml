@@ -85,9 +85,9 @@
     / End Title Page
     / Contact Form
     .row{:class => I18n.locale}
-      .span7
+      .span6
         = render 'shared/msg_form'
-      .span7
+      .contact_information
         .contact-details
           %h3= t('Contact_Details')
           =raw @contact.first.text    
@@ -112,11 +112,11 @@
     / End Title Page
     / Contact Form
     .row{:class => I18n.locale}
-      .span7
+      .span6
         = render 'shared/order_form'
-      .span3
+      .google_site_map
         .contact-details
-          %iframe{:height => "480", :src => "https://www.google.com/maps/d/embed?mid=zbDi3iZxywyM.k3x6DmAjrApY", :width => "640"}
+          %iframe{:height => "480", :src => "https://www.google.com/maps/d/embed?mid=zbDi3iZxywyM.k3x6DmAjrApY", :width => "100%"}
           
           
     / End order Form
