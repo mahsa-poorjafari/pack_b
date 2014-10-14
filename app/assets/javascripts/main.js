@@ -18,7 +18,7 @@ BRUSHED.mobileNav = function(){
       $('.google_site_map').addClass('span4');
       $('.google_site_map').removeClass('span8');
       $('.contact_information').addClass('span4');
-      $('.contact_information').removeClass('span8');
+      $('.contact_information').removeClass('span8');      
       
 		}
 	} else {
