@@ -23,6 +23,7 @@
       $('ul#supersized li img').css('width', '100%');
     #home-slider.en
       .overlay        
+      -@contact = Page.where(title: "Contact us")
       .slide-title{:class => I18n.locale}= raw @contact.first.text        
       .control-nav
         = link_to '#' , :class => "load-item", :id => "prevslide" do    

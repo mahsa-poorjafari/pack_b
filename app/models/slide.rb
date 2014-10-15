@@ -11,7 +11,7 @@ class Slide < ActiveRecord::Base
     end    
   end
   def self.get_supersized_js
-    @contact = Page.where(title: "Contact us")
+    
     ret = []
     
     Slide.all.each do |slide|
