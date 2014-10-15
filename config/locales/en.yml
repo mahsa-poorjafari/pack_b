@@ -26,11 +26,12 @@ en:
   home: 'HOME'
   work: 'OUR PRODUCTS'
   about: 'ABOUT US'
-  contact: 'CONTACT US'
+  contact: 'AGENTS'
   order_menu: 'ORDER'
   Get_in_Touch: 'Get in Touch'
   set_order: 'Set Your Order'
-  Contact_Details: 'Contact Details'
+  Contact_Details: 'Contact With KimiaKaran'
+  agent-list: 'Agents List'
   Google_Search: 'Google Search'
   submit_search: 'Search'
   pro_title: 'Product'
@@ -38,7 +39,10 @@ en:
   type_of_work: 'Type Of KimiaKaran Product'
   All_Projects: 'All Projects'
   visit_site: 'Visited'
-  
+  agent:
+    name: 'Name'
+    address: 'Address'
+    phone: 'Phone'
   msg:
     name: 'Full Name'
     email: 'Email Address'

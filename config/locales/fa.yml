@@ -25,15 +25,21 @@ fa:
   home: 'صفحه اصلی'
   work: 'محصولات '
   about: 'درباره کیمیاکاران'
-  contact: 'تماس با کیمیاکاران'
+  contact: 'نمایندگی ها'
   order_menu: 'ثبت سفارش'
   Get_in_Touch: 'با ما در ارتباط باشید.'
   set_order: 'سفارش خود را ثبت کنید'
-  Contact_Details: 'جزئیات تماس'
+  Contact_Details: 'تماس با کیمیاکاران'
+  agent-list: 'لیست نمایندگی ها'
   visit_site: 'آمار بازدید'
   Google_Search: 'جستجو در گوگل'
   submit_search: 'جستجو'
   pro_title: 'عنوان محصول'
+  
+  agent:
+    name: 'نام نمایندگی'
+    address: ' آدرس'
+    phone: 'تلفن تماس'
   msg:
     name: 'نام خود را وارد کنید.'
     email: 'ایمیل خود را وارد کنید.'

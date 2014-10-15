@@ -1,7 +1,7 @@
 # encoding: UTF-8
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
-
+  before_filter :check_autentication
   # GET /photos
   # GET /photos.json
   def index

@@ -34,9 +34,10 @@
         %ul#slide-list
         = link_to '#work' ,  :id => "nextsection" do        
           %i.font-icon-arrow-simple-down
-        #nextsection{:style => "margin-right:1px; text-align:center"}
-          = link_to (image_tag 'flag/fa.png'), locale: :fa
-          = link_to (image_tag 'flag/en.png'), locale: :en
+        #nextsection{:style => "margin-right:1px; text-align:center; "}
+          = link_to (image_tag 'flag/fa.png'), locale: :fa, :title => "کیمیاکاران فردوس"
+          %br
+          = link_to (image_tag 'flag/en.png'), locale: :en, :title => "کیمیاکاران فردوس"
           
         
     / End Homepage Slider

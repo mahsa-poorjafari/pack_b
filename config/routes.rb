@@ -1,4 +1,6 @@
 PackB::Application.routes.draw do
+  resources :agents
+
   resources :photos
 
   scope "(:locale)", :locale => /en|fa/ do  

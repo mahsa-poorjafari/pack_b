@@ -3,7 +3,7 @@ class StaticController < ApplicationController
     @categories = Category.all
     @about = Page.where(title: "About us")
     @contact = Page.where(title: "Contact us")
-    
+    @agents = Agent.all
   end
   def googlebc5f5c16062b24b0
   

@@ -56,7 +56,7 @@
     / Title Page
     .row      
       .title-page{:class => I18n.locale}
-        %h2.title= @about.first.title
+        %h2.title= t('about')
         .title-description= raw @about.first.text
       
     / End Title Page
@@ -90,7 +90,21 @@
       .contact_information
         .contact-details
           %h3= t('Contact_Details')
-          =raw @contact.first.text    
+        .agent
+          %h4= t('agent-list')          
+          .agent_list
+            %table
+              %tr
+                %th= t('agent.name')
+                %th= t('agent.address')
+                %th= t('agent.phone')       
+          
+              -@agents.each do |agent|
+                %tr
+                  %td= agent.name
+                  %td= agent.address
+                  %td= agent.phone
+            
     
         .ahoy
           = t('visit_site')
