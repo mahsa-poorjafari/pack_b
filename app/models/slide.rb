@@ -11,10 +11,11 @@ class Slide < ActiveRecord::Base
     end    
   end
   def self.get_supersized_js
+    @contact = Page.where(title: "Contact us")
     ret = []
     
     Slide.all.each do |slide|
-      ret << "{image : \"#{slide.image(:medium)}\", title : \"<div class='slide-content'>#{slide.description}</div>\", thumb : '', url : ''}"
+      ret << "{image : \"#{slide.image(:medium)}\", title : \"<div class='slide-content'> </div>\", thumb : '', url : ''}"
              
     end
     ret.join(",")

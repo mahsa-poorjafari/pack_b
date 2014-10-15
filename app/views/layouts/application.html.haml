@@ -23,9 +23,7 @@
       $('ul#supersized li img').css('width', '100%');
     #home-slider.en
       .overlay        
-      -#
-        = render 'slides/slider'
-      
+      .slide-title= raw @contact.first.text        
       .control-nav
         = link_to '#' , :class => "load-item", :id => "prevslide" do    
           %i.font-icon-arrow-simple-left
