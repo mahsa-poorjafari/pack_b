@@ -30,3 +30,7 @@ $('#order-submit').click(function(e) {
     }
   });
 });
+
+$('#contact-box').click(function(){
+  $('.slide-title').fadeIn(100);
+});

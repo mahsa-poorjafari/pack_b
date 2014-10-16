@@ -22,6 +22,10 @@
       $('ul#supersized li img').css('left', '0');
       $('ul#supersized li img').css('width', '100%');
     #home-slider.en
+      = link_to '#' ,  :id => "contact-box" do        
+        %i{:class => I18n.locale}= 'اطلاعات تماس'
+        %br
+        %i.font-icon-arrow-simple-down
       .overlay        
       -@contact = Page.where(title: "Contact us")
       .slide-title{:class => I18n.locale}= raw @contact.first.text        

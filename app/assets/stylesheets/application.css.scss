@@ -61,12 +61,10 @@ box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 
 span.Necessary {color:#DE5E60;}
 .container {position:absolute; width:100%; padding:4%;}
-.contact-bg {background-image:url(image-path('image01.jpg'));
-  background-size:cover; height:130%}
+.contact-bg { height:130%}
 .order-bg {background:#CBE3CB;
   background-size:cover; height:130%}
-.work-bg {background-image:url(image-path('image03.jpg'));
-  background-size:cover; min-height:150%}
+.work-bg { min-height:160%}
 .contact-bg:before, .work-bg:before{
     content: '';
 		position: absolute;
@@ -132,10 +130,14 @@ color:#fff}
 .map-background {background-image: url('کیمیاکاران_فردوس.png') no-repeat}
 .slide-title {background:#142F11;opacity: .7; 
   filter: alpha(opacity=70); /* For IE8 and earlier */
-  width:98%; height:25%;
+  width:40%; height:25%;
   padding:1%;
+  right:0;
+  display:none;
   color:#FBFBAF;
   text-align:center;
+  top: 12%;
+position: absolute;
 }
 .slide-title p {width:95%; margin-bottom:1%}
 .ahoy {color:#F4F4AD;}
