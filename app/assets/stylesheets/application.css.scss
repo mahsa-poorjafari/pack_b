@@ -74,7 +74,7 @@ span.Necessary {color:#DE5E60;}
 		right: 0;
 		bottom: 0;
 		left: 0;    
-		background-image: radial-gradient(circle, #A4BAA5, #65806B,#CCF7D8);
+		background-image: radial-gradient(circle, #1B1E1C, #234723,#001C00);
 		opacity: .65; 
     filter: alpha(opacity=65); /* For IE8 and earlier */
 
@@ -125,7 +125,7 @@ padding-bottom:5%;}
 
 
 #about {min-height:90%}
-.agent_list {width:100%; background:#4D4D4D;opacity:.7; 
+.agent_list {width:100%; background:#1a1a1a;opacity:.7; 
 filter: alpha(opacity=70); /* For IE8 and earlier */
 color:#fff}
 .agent_list table tr td, .agent_list table tr th,{padding:1%}
@@ -135,5 +135,7 @@ color:#fff}
   width:98%; height:25%;
   padding:1%;
   color:#FBFBAF;
+  text-align:center;
 }
 .slide-title p {width:95%; margin-bottom:1%}
+.ahoy {color:#F4F4AD;}

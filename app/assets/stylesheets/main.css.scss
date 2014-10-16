@@ -202,7 +202,7 @@ h4,
 h5,
 h6{
 	margin:0 0 20px 0;
-	color:#1A1A1A;text-shadow: 2px 2px 1px #4D4D4D;
+	color:#fff;text-shadow: 2px 2px 1px #4D4D4D;
 	font-weight:300;
 	
 	line-height:1.5em;
@@ -656,14 +656,14 @@ nav#menu #menu-nav li a:hover {
   color:#FFD400;
 }
 .title-page h3, .title-page h2 {text-align:center}
-.title-page p {font-size:20px; color:#0C3A17; text-align:justify; line-height: 40px;}
+.title-page p {font-size:20px; color:#0C3A17; text-align:justify; line-height: 40px; text-shadow:none}
 .mobile-font_p {font-size:32px; text-align:justify; line-height:45px;}
 .mobile-font_title {font-size:50px;  line-height: 40px;}
 .title-page .title-description {
 	font-size: 24px;
 	font-weight: 200;  
 	margin: 0;
-  color:#000;text-shadow: 2px 2px 1px #4D4D4D;
+  color:#fff;
 }
 
 /* ==================================================
@@ -915,7 +915,7 @@ nav#menu #menu-nav li a:hover {
 ================================================== */
 
 .contact-details h3 {
-	color:#000;text-shadow: 2px 2px 1px #4D4D4D;
+	color:#fff;text-shadow: 2px 2px 1px #4D4D4D;
     font-size: 24px;
     font-weight: 300;
     margin-bottom: 30px;
