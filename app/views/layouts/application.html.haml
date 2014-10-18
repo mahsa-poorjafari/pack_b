@@ -22,13 +22,14 @@
       $('ul#supersized li img').css('left', '0');
       $('ul#supersized li img').css('width', '100%');
     #home-slider.en
-      = link_to '#' ,  :id => "contact-box" do        
-        %i{:class => I18n.locale}= 'اطلاعات تماس'
-        %br
-        %i.font-icon-arrow-simple-down
-      .overlay        
       -@contact = Page.where(title: "Contact us")
-      .slide-title{:class => I18n.locale}= raw @contact.first.text        
+      .overlay        
+      .contact-menu
+        = link_to '#' ,  :id => "contact-box" do        
+          %i.font-icon-arrow-simple-left#contact-arrow
+          %i{:class => I18n.locale}= 'اطلاعات تماس'                  
+        .slide-title{:class => I18n.locale}= raw @contact.first.text          
+       
       .control-nav
         = link_to '#' , :class => "load-item", :id => "prevslide" do    
           %i.font-icon-arrow-simple-left

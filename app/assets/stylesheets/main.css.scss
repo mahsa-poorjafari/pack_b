@@ -433,13 +433,13 @@ h3.spec {
 #home-slider ul#slide-list li.current-slide a:hover {
 	background-color:#1D6526;
 }
- #home-slider #contact-box {height:8%; width:8%; background-color: #27723C;
+ #home-slider #contact-box {height:100%; width:130px; background-color: #27723C;
 	margin: 0;
 	position: relative;
   z-index: 100;
   text-align:center;
-  padding-top:2%;
-	float:right; 
+  padding-top:25%;
+	float:left; 
   -webkit-transition: background 0.1s linear 0s;	
 	   -moz-transition: background 0.1s linear 0s;
 		 -o-transition: background 0.1s linear 0s;

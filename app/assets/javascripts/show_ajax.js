@@ -32,5 +32,19 @@ $('#order-submit').click(function(e) {
 });
 
 $('#contact-box').click(function(){
-  $('.slide-title').fadeIn(100);
+  if ($('.contact-menu').css('width') == '129px') 
+  {
+    $('.contact-menu').animate({width:'100%'},"slow");  
+    $('.contact-menu i#contact-arrow').removeClass('font-icon-arrow-simple-left');
+    $('.contact-menu i#contact-arrow').addClass('font-icon-arrow-simple-right');
+    $('#contact-box').css('padding-top', '2%');
+  }
+  else
+    {
+    $('.contact-menu').animate({width:'10%'},"slow");  
+    $('.contact-menu i#contact-arrow').removeClass('font-icon-arrow-simple-right');
+    $('.contact-menu i#contact-arrow').addClass('font-icon-arrow-simple-left');
+    $('#contact-box').css('padding-top', '25%');
+  }
 });
+

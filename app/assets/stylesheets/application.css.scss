@@ -128,16 +128,20 @@ filter: alpha(opacity=70); /* For IE8 and earlier */
 color:#fff}
 .agent_list table tr td, .agent_list table tr th,{padding:1%}
 .map-background {background-image: url('کیمیاکاران_فردوس.png') no-repeat}
-.slide-title {background:#142F11;opacity: .7; 
+.slide-title {
+  background:#142F11;
+  opacity: .7; 
   filter: alpha(opacity=70); /* For IE8 and earlier */
-  width:40%; height:25%;
+  width:90%; height:100%;
   padding:1%;
-  right:0;
-  display:none;
+  right:0;  
+  
   color:#FBFBAF;
-  text-align:center;
-  top: 12%;
-position: absolute;
+  text-align:center;  
+  float:right;
+  position: absolute;
 }
 .slide-title p {width:95%; margin-bottom:1%}
 .ahoy {color:#F4F4AD;}
+.contact-menu {width:10%; height:15%; position:absolute; right:0; overflow:hidden}
+
