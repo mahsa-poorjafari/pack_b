@@ -50,6 +50,7 @@ a:focus{
 	color:#27723C;
 	text-decoration:none;
 }
+
 a:hover #contact-arrow {color:#FFEC00;}
 a img {
 	border: none;
@@ -438,7 +439,7 @@ h3.spec {
 	position: relative;
   z-index: 100;
   text-align:center;
-  padding-top:2%;
+  padding-top:1%;
   
 	float:left; 
   -webkit-transition: background 0.1s linear 0s;	
@@ -458,6 +459,8 @@ h3.spec {
 		 -o-transition: background 0.1s linear 0s;
 		    transition: background 0.1s linear 0s;
 }
+#home-slider #contact-box.active {background-color:#FFEC00; color:#27723C;}
+#home-slider #contact-box.active #contact-arrow{ color:#FFEC00;}
 #contact-box  #contact-btn-text {
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
@@ -476,7 +479,7 @@ h3.spec {
 background: #27723C;
 width: 51px;
 height: 50px;
-margin-top: 57px;
+margin-top: 60px;
 text-align: center;
 padding-top: 30%;
 }

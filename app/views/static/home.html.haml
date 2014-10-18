@@ -30,7 +30,7 @@
             %ul#thumbs
               - @categories.each do |category|
                 / Item Project and Filter Name
-                - category.products.each do |product|
+                - category.products.order('title DESC').each do |product|
                   %li.item-thumbs{:class => "item" + category.id.to_s}
                     / Fancybox - Gallery Enabled - Title - Full Image                    
                     = link_to product , :class => "hover-wrap", :title => product.title, :remote => true do                
