@@ -32,19 +32,20 @@ $('#order-submit').click(function(e) {
 });
 
 $('#contact-box').click(function(){
-  if ($('.contact-menu').css('width') == '129px') 
+  if ($('.contact-menu').css('width') == '51px') 
   {
     $('.contact-menu').animate({width:'100%'},"slow");  
+    $('#contact-box #contact-btn-text').css('margin-top', '43%');
     $('.contact-menu i#contact-arrow').removeClass('font-icon-arrow-simple-left');
     $('.contact-menu i#contact-arrow').addClass('font-icon-arrow-simple-right');
-    $('#contact-box').css('padding-top', '2%');
+    
   }
   else
     {
-    $('.contact-menu').animate({width:'10%'},"slow");  
+    $('.contact-menu').animate({width:'4%'},"slow");  
     $('.contact-menu i#contact-arrow').removeClass('font-icon-arrow-simple-right');
     $('.contact-menu i#contact-arrow').addClass('font-icon-arrow-simple-left');
-    $('#contact-box').css('padding-top', '25%');
+    $('#contact-box #contact-btn-text').css('margin-top', '70%');
   }
 });
 

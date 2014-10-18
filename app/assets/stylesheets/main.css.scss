@@ -47,10 +47,10 @@ a:hover,
 a:active,
 a:focus{
 	outline: 0;
-	color:#DE5E60;
+	color:#27723C;
 	text-decoration:none;
 }
-
+a:hover #contact-arrow {color:#FFEC00;}
 a img {
 	border: none;
 }
@@ -433,12 +433,13 @@ h3.spec {
 #home-slider ul#slide-list li.current-slide a:hover {
 	background-color:#1D6526;
 }
- #home-slider #contact-box {height:100%; width:130px; background-color: #27723C;
+ #home-slider #contact-box {height:100%; width:50px; background-color: #27723C;
 	margin: 0;
 	position: relative;
   z-index: 100;
   text-align:center;
-  padding-top:25%;
+  padding-top:2%;
+  
 	float:left; 
   -webkit-transition: background 0.1s linear 0s;	
 	   -moz-transition: background 0.1s linear 0s;
@@ -457,9 +458,27 @@ h3.spec {
 		 -o-transition: background 0.1s linear 0s;
 		    transition: background 0.1s linear 0s;
 }
-
+#contact-box  #contact-btn-text {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  writing-mode: rl-tb;
+  width: 100px;
+  padding-top: 0;
+  margin-top:70%;
+  text-align: end;
+  margin-left: -56%;
+  }
 #home-slider #nextsection:hover,  #home-slider #contact-box:hover {
 	background-color:#FFEC00;
+}
+#contact-arrow {
+background: #27723C;
+width: 51px;
+height: 50px;
+margin-top: 57px;
+text-align: center;
+padding-top: 30%;
 }
 
 #home-slider #nextsection i {

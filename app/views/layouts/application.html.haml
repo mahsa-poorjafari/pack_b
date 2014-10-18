@@ -25,9 +25,11 @@
       -@contact = Page.where(title: "Contact us")
       .overlay        
       .contact-menu
+        
         = link_to '#' ,  :id => "contact-box" do        
+          #contact-btn-text{:class => I18n.locale}= 'اطلاعات تماس'
           %i.font-icon-arrow-simple-left#contact-arrow
-          %i{:class => I18n.locale}= 'اطلاعات تماس'                  
+          
         .slide-title{:class => I18n.locale}= raw @contact.first.text          
        
       .control-nav
