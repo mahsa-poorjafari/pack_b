@@ -15,7 +15,9 @@
       %tr      
         %td= (i+1)
         %td= photo.description        
-        %td= photo.product.title
+        %td
+          - if photo.product.present?
+            = photo.product.title
         %td= photo.image_file_name
         %td
           - if is_admin?
