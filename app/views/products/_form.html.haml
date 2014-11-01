@@ -6,8 +6,12 @@
           %li= msg
 
   .field
+    
     = f.label 'گروه مربوطه را انتخاب کنید.'
-    = f.select(:category_id, Category.all.collect {|u| [u.title_fa, u.id]}, :prompt => ' بخش را انتخاب کنید.') 
+    - if @product.category_id.present?    
+      %b= @product.category.title
+    -else
+      = f.select(:category_id, Category.all.collect {|u| [u.title_fa, u.id]}, :prompt => ' بخش را انتخاب کنید.') 
   .field
     = f.label 'عنوان به فارسی:'
     = f.text_field :title_fa

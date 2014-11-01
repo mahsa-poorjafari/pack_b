@@ -4,7 +4,7 @@
     %title 
       = t("kimiakaran") + ', ' + Category.all.collect(&:title).join(",") #{@head.fetch(:title, '') if @head}
     = stylesheet_link_tag    "application", media: "all"
-    
+    = javascript_include_tag "application"
     = csrf_meta_tags 
     %meta{:charset => "utf-8"}
     %meta{:name => "google-site-verification", :content => "p8ANBrP4OE7-rkdHFUnOQtHIsMCJOFI5TBLQiKa8iqM" }
