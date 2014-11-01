@@ -7,7 +7,10 @@
 
   .field
     = f.label 'محصول مربوط:'
-    = f.select(:product_id, Product.all.collect {|u| [u.title_fa, u.id]}, :prompt => ' بخش را انتخاب کنید.') 
+    - if @photo.product_id.present?
+      %b= @photo.product.title
+    - else
+      = f.select(:product_id, Product.all.collect {|u| [u.title_fa, u.id]}, :prompt => ' بخش را انتخاب کنید.') 
     
   .field
     = f.label 'تصویر:'
