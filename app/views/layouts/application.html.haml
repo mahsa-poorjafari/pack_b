@@ -24,14 +24,10 @@
     #home-slider.en
       -@contact = Page.where(title: "Contact us")
            
-      .contact-menu
-        
-        = link_to '#' ,  :id => "contact-box" do        
+      .contact-menu        
+        = link_to '#order' ,  :id => "contact-box" do        
           #contact-btn-text{:class => I18n.locale}= 'اطلاعات تماس'
-          %i.font-icon-arrow-simple-left#contact-arrow
-          
-        .slide-title{:class => I18n.locale}= raw @contact.first.text          
-       
+          %i.font-icon-arrow-simple-down#contact-arrow
       .control-nav
         = link_to '#' , :class => "load-item", :id => "prevslide" do    
           %i.font-icon-arrow-simple-left
@@ -41,9 +37,9 @@
         = link_to '#work' ,  :id => "nextsection" do        
           %i.font-icon-arrow-simple-down
         #nextsection{:style => "margin-right:1px; text-align:center; "}
-          = link_to (image_tag 'flag/fa.png'), locale: :fa, :title => "کیمیاکاران فردوس"
+          = link_to (image_tag 'flag/fa.png', :title => "کیمیاکاران فردوس", :alt => "کیمیاکاران فردوس"), locale: :fa
           %br
-          = link_to (image_tag 'flag/en.png'), locale: :en, :title => "کیمیاکاران فردوس"
+          = link_to (image_tag 'flag/en.png', :title => "KimiaKaran Ferdows", :alt => "KimiaKaran Ferdows"), locale: :en
           
         
     / End Homepage Slider
@@ -52,7 +48,7 @@
       .sticky-nav
         %a#mobile-nav.menu-nav{href: "#menu-nav"} Menu
         #logo
-          %a#goUp{href: "#home-slider", title: "KIMIA KARAN "}
+          %a#goUp{href: "#home-slider", title: "KIMIAKARAN "}
             =t('kimiakaran')
         - if is_admin?
           .admin_menu.fa

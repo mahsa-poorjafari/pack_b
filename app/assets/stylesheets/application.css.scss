@@ -40,8 +40,9 @@ ul#other-page-menu li.active a, ul#other-page-menu  li:hover a{color:#FFEC00;}
 .admin_menu {
   z-index:1000;
   margin-left:10px;
-  top:0;  width:20%;
-  float:left;
+  position:absolute;
+  top:70%;  width:20%;
+  left:0;  
   overflow:hidden;  
   background:#4A7D47; color:#FFEC00; height:35px;
   -webkit-transition: all .5s ease;
@@ -124,7 +125,7 @@ padding-bottom:5%;}
 #google-search .google-submit:hover #search-submit{color:#FFFF65}
 
 
-#about {min-height:90%}
+#about {min-height:70%}
 .agent_list {width:100%; background:#1a1a1a;opacity:.7; 
 filter: alpha(opacity=70); /* For IE8 and earlier */
 color:#fff}

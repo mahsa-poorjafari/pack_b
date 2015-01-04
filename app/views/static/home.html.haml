@@ -79,7 +79,6 @@
   .container
     / Title Page
     .row
-    
       .title-page{:class => I18n.locale}
         %h2.title= t('Get_in_Touch')
         %h3.title-description شما میتوانید از طریق ایمیل یا  تلفن با ما در ارتباط باشید
@@ -89,24 +88,19 @@
       .span6
         = render 'shared/msg_form'
       .contact_information
-        .contact-details
-          %h3= t('Contact_Details')
         .agent
-          %h4= t('agent-list')          
+          %h4= t('agent-list')
           .agent_list
             %table
               %tr
                 %th= t('agent.name')
                 %th= t('agent.address')
-                %th= t('agent.phone')       
-          
+                %th= t('agent.phone')
               -@agents.each do |agent|
                 %tr
                   %td= agent.name
                   %td= agent.address
                   %td= agent.phone
-            
-    
         .ahoy
           = t('visit_site')
           = Visit.all.count
@@ -119,21 +113,24 @@
 #order.page.order-bg
   .container
     / Title Page
-    .row
-    
+    .row    
       .title-page
         %h2.title= t('set_order')
         %h3.title-description{:style => "color:#0A210A"}  محصول موردنیاز خود را بصورت آنلاین سفارش دهید.
     / End Title Page
+    
     / Contact Form
     .row{:class => I18n.locale}
-      .span6
+      .span4
+        .contact-details
+          %h3= t('Contact_Details')        
+          %div{:class => I18n.locale}= raw @contact.first.text  
+      .span4
         = render 'shared/order_form'
       .google_site_map
         .contact-details.map-background          
           %iframe{:height => "480", :src => "https://mapsengine.google.com/map/embed?mid=zbDi3iZxywyM.k3x6DmAjrApY&z=11", :width => "100%"}
-          
-          
+
     / End order Form
 / End order Section
 

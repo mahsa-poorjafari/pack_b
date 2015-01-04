@@ -31,23 +31,4 @@ $('#order-submit').click(function(e) {
   });
 });
 
-$('#contact-box').click(function(){
-  if ($('.contact-menu').css('width') == '51px') 
-  {
-    $('.contact-menu').animate({width:'100%'},"slow");  
-    $('#contact-box #contact-btn-text').css('margin-top', '43%');
-    $('.contact-menu i#contact-arrow').removeClass('font-icon-arrow-simple-left');
-    $('.contact-menu i#contact-arrow').addClass('font-icon-arrow-simple-right');
-    $('#contact-box').addClass('active');
-    
-  }
-  else
-    {
-    $('.contact-menu').animate({width:'4%'},"slow");  
-    $('.contact-menu i#contact-arrow').removeClass('font-icon-arrow-simple-right');
-    $('.contact-menu i#contact-arrow').addClass('font-icon-arrow-simple-left');
-    $('#contact-box').removeClass('active');
-    $('#contact-box #contact-btn-text').css('margin-top', '70%');
-  }
-});
 

@@ -674,24 +674,26 @@ nav#menu #menu-nav li a:hover {
 	position: relative;
 	z-index: 99;
 }
-
+/*
 .title-page {
 	
 	margin-bottom: 100px;	
 }
-
+*/
 .title-page .title {
 	font-size: 48px;
   text-shadow: 2px 2px 1px #4D4D4D;
+  color:#FFD400;
 	margin: 0 0 10px 0;
   text-align:center;
-  color:#FFD400;
+  
 }
 .title-page h3, .title-page h2 {text-align:center}
 .title-page p {font-size:20px; color:#0C3A17; text-align:justify; line-height: 40px; text-shadow:none}
 .mobile-font_p {font-size:32px; text-align:justify; line-height:45px;}
 .mobile-font_title {font-size:50px;  line-height: 40px;}
 .title-page .title-description {
+  margin-top:50px;
 	font-size: 24px;
 	font-weight: 200;  
 	margin: 0;
@@ -947,12 +949,13 @@ nav#menu #menu-nav li a:hover {
 ================================================== */
 
 .contact-details h3 {
-	color:#fff;text-shadow: 2px 2px 1px #4D4D4D;
-    font-size: 24px;
-    font-weight: 300;
-    margin-bottom: 30px;
+	text-shadow: 2px 2px 1px #4D4D4D;
+  color:#FFD400;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 30px;
 	line-height: 1em;
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .contact-details ul {

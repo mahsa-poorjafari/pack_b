@@ -8,6 +8,7 @@
       %th توضیحات
       %th محصول مربوطه
       %th نام تصویر      
+      %th تصویر     
       %th عملیات
       
 
@@ -19,6 +20,7 @@
           - if photo.product.present?
             = photo.product.title
         %td= photo.image_file_name
+        %td= photo.image(:small)
         %td
           - if is_admin?
             = link_to 'مشاهده', photo

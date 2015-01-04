@@ -14,6 +14,8 @@
     
   .field
     = f.label 'تصویر:'
+    - if @photo.image.present?
+      = image_tag @photo.image(:small)
     = f.file_field :image
   .field.editor
     = f.label 'توضیحات به فارسی:'
