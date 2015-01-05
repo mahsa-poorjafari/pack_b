@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140727044014) do
+ActiveRecord::Schema.define(version: 20141015071113) do
+
+  create_table "agents", force: true do |t|
+    t.string   "name_fa"
+    t.string   "name_en"
+    t.string   "address_fa"
+    t.string   "address_en"
+    t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", force: true do |t|
     t.string   "title_en"
@@ -38,6 +48,19 @@ ActiveRecord::Schema.define(version: 20140727044014) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
+  create_table "licenses", force: true do |t|
+    t.string   "title_en"
+    t.string   "title_fa"
+    t.string   "text_en"
+    t.string   "text_fa"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
   create_table "messages", force: true do |t|
     t.string   "name"
     t.string   "email"
@@ -45,6 +68,7 @@ ActiveRecord::Schema.define(version: 20140727044014) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "message_type", default: false
   end
 
   create_table "pages", force: true do |t|
@@ -54,6 +78,18 @@ ActiveRecord::Schema.define(version: 20140727044014) do
     t.datetime "updated_at"
     t.string   "title_fa"
     t.text     "text_fa"
+  end
+
+  create_table "photos", force: true do |t|
+    t.string   "description_fa"
+    t.string   "description_en"
+    t.integer  "product_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "pictures", force: true do |t|
@@ -96,5 +132,30 @@ ActiveRecord::Schema.define(version: 20140727044014) do
     t.datetime "updated_at"
     t.string   "user_name"
   end
+
+  create_table "visits", force: true do |t|
+    t.binary   "visitor_id",       limit: 16
+    t.string   "ip"
+    t.text     "user_agent"
+    t.text     "referrer"
+    t.text     "landing_page"
+    t.integer  "user_id"
+    t.string   "referring_domain"
+    t.string   "search_keyword"
+    t.string   "browser"
+    t.string   "os"
+    t.string   "device_type"
+    t.string   "country"
+    t.string   "region"
+    t.string   "city"
+    t.string   "utm_source"
+    t.string   "utm_medium"
+    t.string   "utm_term"
+    t.string   "utm_content"
+    t.string   "utm_campaign"
+    t.datetime "started_at"
+  end
+
+  add_index "visits", ["user_id"], name: "index_visits_on_user_id", using: :btree
 
 end

@@ -14,8 +14,10 @@ test:
   timeout: 5000
 production:
   adapter: mysql2
-  database: b_pack_development
+  database: kimiakaran
   pool: 5
   timeout: 5000
+  username: kimiakaran
+  password: rhsrdCnGjDYqT7K8
   
 
