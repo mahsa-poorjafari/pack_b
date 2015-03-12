@@ -1,0 +1,16 @@
+.fa.other-page   
+  %p#notice= notice
+  
+  = image_tag @license.image(:medium)
+  %p
+    %b عنوان:
+    = @license.title
+  
+  %p
+    %b متن:
+    = @license.text
+  
+
+  = link_to 'ویرایش', edit_license_path(@license)
+  \|
+  = link_to 'بازگشت', :back

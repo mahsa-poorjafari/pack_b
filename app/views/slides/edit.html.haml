@@ -1,7 +1,8 @@
-%h1 Editing slide
+.fa.other-page    
+  %h1 ویرایش عکس اسلایدر
 
-= render 'form'
-
-= link_to 'Show', @slide
-\|
-= link_to 'Back', slides_path
+  = render 'form'
+  - if is_admin?
+    = link_to 'نمایش', @slide
+    \|
+    = link_to 'بازگشت', :back

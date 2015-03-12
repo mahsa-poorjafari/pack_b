@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-PackB::Application.config.secret_key_base = '0137ef090211af6f1b664d1e40710c44e00d64cf98d5fcf92dcec39150acd239806d69c42c1e0426d7463d8a5bd8af901ccd3d9ede36718208b80d616cd7ce1f'
+PackB::Application.config.secret_key_base = 'c9673586d87c7df4f89d2c6f2837be3dde5f49435a50ed814f330f62c6c443823e7a99a24bcbf9d1cd82b937570bb6a4aeb283f51c1beddcce4f261045033dc9'

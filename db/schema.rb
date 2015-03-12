@@ -134,7 +134,7 @@ ActiveRecord::Schema.define(version: 20141015071113) do
   end
 
   create_table "visits", force: true do |t|
-    t.binary   "visitor_id",       limit: 16
+    t.uuid     "visitor_id"
     t.string   "ip"
     t.text     "user_agent"
     t.text     "referrer"

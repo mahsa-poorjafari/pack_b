@@ -12,6 +12,9 @@
 /log/*.log
 /tmp
 
+/test/
+/spec/
+/public/system/
 #ignore ckeditor assets
 public/ckeditor_assets
 public/assets

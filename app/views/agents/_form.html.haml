@@ -1,0 +1,24 @@
+= form_for @agent do |f|
+  - if @agent.errors.any?
+    #error_explanation      
+      %ul
+        - @agent.errors.each do |attr, msg|
+          %li= msg
+
+  .field
+    = f.label "نام نماینده به فارسی:"
+    = f.text_field :name_fa
+  .field
+    = f.label "نام نماینده به انگلیسی:"
+    = f.text_field :name_en
+  .field
+    = f.label "آدرس به فارسی:"
+    = f.text_field :address_fa
+  .field
+    = f.label "آدرس به انگلیسی"
+    = f.text_field :address_en
+  .field
+    = f.label "تلفن های تماس"
+    = f.text_field :phone
+  .actions
+    = f.submit 'ثبت', :class => "btn btn-default"

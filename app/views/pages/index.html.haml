@@ -1,21 +1,23 @@
-%h1 Listing pages
+.page.fa.other-page  
+  %h1 لیست صفحات متنی
+  - if is_admin?
+    = link_to 'ایجاد صفحه متنی جدید', new_page_path, :class => "btn btn-default"
 
-%table
-  %tr
-    %th Title
-    %th Text
-    %th
-    %th
-    %th
-
-  - @pages.each do |page|
+  %table
     %tr
-      %td= page.title
-      %td= page.text
-      %td= link_to 'Show', page
-      %td= link_to 'Edit', edit_page_path(page)
-      %td= link_to 'Destroy', page, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %th عنوان صفحه
+      %th عملیات
 
-%br
+    - @pages.each do |page|
+      %tr
+        %td= page.title        
+        %td
+          = link_to 'مشاهده', page
+          \|          
+          = link_to 'ویرایش', edit_page_path(page)
+          \|
+          = link_to 'حذف', page, :method => :delete, :data => { :confirm => 'آیا مطمئن هستید؟' }
 
-= link_to 'ایجاد صفحه متنی جدید', new_page_path
+  
+
+  

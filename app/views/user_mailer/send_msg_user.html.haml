@@ -1,0 +1,23 @@
+%div{:style => "direction:rtl"}
+  %h1= 'ارسال پیام توسط کاربر از طریق سایت'
+  %h3= 'اطلاعات کاربر'
+  %p
+    %b ایمیل:
+    = @message.email
+  %p
+    %b نام کاربر:
+    = @message.name
+  %p  
+    %b تلفن تماس:
+    = @message.phone_number
+    
+  %br
+  %h4
+    %b متن پیام:
+    = @message.text
+  %p
+    %b
+      تاریخ ارسال:
+    = JalaliDate.new(@message.created_at).strftime("%y/%m/%e %X")
+    
+

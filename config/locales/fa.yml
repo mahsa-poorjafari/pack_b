@@ -20,4 +20,38 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 fa:
-  hello: "Hello world"
+
+  kimiakaran: 'کیمیاکاران فردوس'
+  home: 'صفحه اصلی'
+  work: 'محصولات '
+  about: 'درباره کیمیاکاران'
+  contact: 'نمایندگی ها'
+  order_menu: 'ثبت سفارش'
+  Get_in_Touch: 'با ما در ارتباط باشید.'
+  set_order: 'سفارش خود را ثبت کنید'
+  Contact_Details: 'تماس با کیمیاکاران'
+  agent-list: 'لیست نمایندگی ها'
+  visit_site: 'آمار بازدید'
+  Google_Search: 'جستجو در گوگل'
+  submit_search: 'جستجو'
+  pro_title: 'عنوان محصول'
+  
+  agent:
+    name: 'نام نمایندگی'
+    address: ' آدرس'
+    phone: 'تلفن تماس'
+  msg:
+    name: 'نام خود را وارد کنید.'
+    email: 'ایمیل خود را وارد کنید.'
+    phone: 'شماره تماس خود را وارد کنید.'
+    text: 'متن پیام خود را وارد کنید.'
+    send: 'ارسال پیام'
+  
+  order:
+    text: 'متن سفارش خود را وارد کنید.'
+    send: 'ثبت سفارش'
+  
+  our_work: 'محصولات کیمیاکاران'
+  type_of_work: 'گروه محصولات کیمیاکاران'
+  All_Projects: 'تمام محصولات'
+

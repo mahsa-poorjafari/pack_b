@@ -1,3 +1,13 @@
+# encoding: UTF-8
 class UserMailer < ActionMailer::Base
-  default from: "from@example.com"
+
+  def send_msg_user
+    @message = Message.last
+    mail(:to =>  User.all.collect(&:email).join(','), :subject => "پیام ارسال شده کاربر ", :from => "info@raush.ir")
+  end 
+  def send_order_user
+    @message = Message.last
+    mail(:to =>  User.all.collect(&:email).join(','), :subject => "سفارش ارسال شده توسط کاربر ", :from => "info@raush.ir")
+  end
+  
 end

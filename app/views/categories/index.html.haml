@@ -1,25 +1,18 @@
-%h1 Listing categories
-
-%table
-  %tr
-    %th Title en
-    %th Title fa
-    %th Description en
-    %th Description fa
-    %th
-    %th
-    %th
-
-  - @categories.each do |category|
-    %tr
-      %td= category.title_en
-      %td= category.title_fa
-      %td= category.description_en
-      %td= category.description_fa
-      %td= link_to 'Show', category
-      %td= link_to 'Edit', edit_category_path(category)
-      %td= link_to 'Destroy', category, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'ایجاد دسته جدید محصولات', new_category_path
+.page.fa.other-page{:style => "height:100%"}
+  - if is_admin?
+    = link_to 'ایجاد دسته جدید محصولات', new_category_path, :class => "btn btn-default"
+  / Our Work Section
+  #work
+    - @categories.each do |category|
+      %div
+        %p= category.title
+        
+        = link_to 'مشاهده بیشتر', category
+        \|
+        = link_to 'ویرایش', edit_product_path(category)
+        \|
+        = link_to 'حذف', category, :method => :delete, :data => { :confirm => 'آیا مطمئن هستید؟' }
+             
+.clear-float              
+   
+    

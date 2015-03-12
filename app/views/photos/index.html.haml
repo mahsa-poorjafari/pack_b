@@ -1,0 +1,34 @@
+.fa.other-page
+  %h1 لیست تصاویر محصولات
+  - if is_admin?
+    = link_to 'تصویر جدید', new_photo_path, :class => "btn btn-default"
+  %table
+    %tr            
+      %th ردیف
+      %th توضیحات
+      %th محصول مربوطه
+      %th نام تصویر      
+      %th تصویر     
+      %th عملیات
+      
+
+    - @photos.each_with_index do |photo, i|
+      %tr      
+        %td= (i+1)
+        %td= photo.description        
+        %td
+          - if photo.product.present?
+            = photo.product.title
+        %td= photo.image_file_name
+        %td= photo.image(:small)
+        %td
+          - if is_admin?
+            = link_to 'مشاهده', photo
+            \|
+            = link_to 'ویرایش', edit_photo_path(photo)
+            \|
+            = link_to 'حذف', photo, :method => :delete, :data => { :confirm => 'آیا مطمئن هستید؟' }
+
+
+
+  

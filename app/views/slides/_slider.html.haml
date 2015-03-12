@@ -1,0 +1,33 @@
+
+.carousel.slide{:style => "position:static"}
+  .carousel-inner         
+    - @slides = Slide.all
+    - @slides.each do |slide|
+      .item-row.item
+        = image_tag slide.image(:gallery_size), :id =>  slide.id , :class => "slide", :title => "رنگین کمان_" + slide.image_file_name, :alt =>  "رنگین کمان _" + slide.image_file_name
+        
+            
+  -if @slides.count > 1          
+    .carousel-controls
+      .center
+        %ol.carousel-indicator-list.carousel-indicators
+          -  @slides.each_with_index do |slide, index|
+            %li{"data-slide-to" => "#{index}", "data-target" => "#homeCarousel", :class => "slide-indicator"}      
+    .control-nav
+      = link_to '#' , :class => "load-item", :id => "prevslide" do    
+        %i.font-icon-arrow-simple-left
+      = link_to '#' , :class => "load-item", :id => "nextslide" do        
+        %i.font-icon-arrow-simple-right
+      %ul#slide-list
+      = link_to '#work' ,  :id => "nextsection" do        
+        %i.font-icon-arrow-simple-down
+      #nextsection{:style => "margin-right:1px; text-align:center"}
+        = link_to (image_tag 'flag/fa.png'), locale: :fa
+        = link_to (image_tag 'flag/en.png'), locale: :en
+
+:javascript 
+  $(".item").first().addClass("active");
+  $(".slide-indicator").first().addClass("active");
+  $('.carousel').carousel();
+        
+

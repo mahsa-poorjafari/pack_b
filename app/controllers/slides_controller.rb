@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class SlidesController < ApplicationController
   before_action :set_slide, only: [:show, :edit, :update, :destroy]
   before_filter :check_autentication
@@ -69,6 +70,6 @@ class SlidesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def slide_params
-      params.require(:slide).permit(:description, :description_fa)
+      params.require(:slide).permit(:description, :description_fa, :image)
     end
 end
