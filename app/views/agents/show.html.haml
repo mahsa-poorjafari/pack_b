@@ -1,0 +1,18 @@
+.fa.other-page{:style => "height:90%;"}
+  %p#notice= notice
+
+  %p
+    %b نام نمایندگی:
+    = @agent.name
+  
+  %p
+    %b آدرس:
+    = @agent.address
+  
+  %p
+    %b تلفن های تماس:
+    = @agent.phone
+
+  = link_to 'ویرایش', edit_agent_path(@agent)
+  \|
+  = link_to 'بازگشت', agents_path

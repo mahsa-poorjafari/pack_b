@@ -1,0 +1,28 @@
+= form_for @photo do |f|
+  - if @photo.errors.any?
+    #error_explanation      
+      %ul
+        - @photo.errors.each do |attr, msg|
+          %li= msg
+
+  .field
+    = f.label 'محصول مربوط:'
+    - if @photo.product_id.present?
+      %b= @photo.product.title
+    - else
+      = f.select(:product_id, Product.all.collect {|u| [u.title_fa, u.id]}, :prompt => ' بخش را انتخاب کنید.') 
+    
+  .field
+    = f.label 'تصویر:'
+    - if @photo.image.present?
+      = image_tag @photo.image(:small)
+    = f.file_field :image
+  .field.editor
+    = f.label 'توضیحات به فارسی:'
+    = f.text_area :description_fa , :class => "ckeditor" 
+  .field.editor
+    = f.label 'توضیحات به انگلیسی:'
+    = f.text_area:description_en, :class => "ckeditor"
+  
+  .actions
+    = f.submit 'ثبت', :class => "btn btn-default"

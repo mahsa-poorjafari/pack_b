@@ -1,0 +1,13 @@
+#show-details.nano{:class => I18n.locale}
+  = image_tag 'kimiakaran.png', :class => "close", :alt => "کیمیاکاران", :title => "کیمیاکاران"
+  .pull-right.pro-text.nano-content
+    %p
+      %b= t('pro_title')
+      = @product.title
+    %div  
+      =raw @product.description
+  .pull-left.pro-pic
+    - if @product.photos.present?
+      - @product.photos.each do |pic|  
+        .product-photo=image_tag pic.image(:small), :alt => pic.image_file_name, :title => pic.image_file_name
+  .clear-float

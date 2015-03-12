@@ -1,20 +1,75 @@
 !!!
 %html
-  %head
-    %title= 'بسته درجه دو'
- 
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true 
-    = javascript_include_tag "application", "data-turbolinks-track" => true 
+  %head    
+    %title 
+      = t("kimiakaran") + ', ' + Category.all.collect(&:title).join(",") #{@head.fetch(:title, '') if @head}
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
     = csrf_meta_tags 
+    %meta{:charset => "utf-8"}
+    %meta{:name => "google-site-verification", :content => "p8ANBrP4OE7-rkdHFUnOQtHIsMCJOFI5TBLQiKa8iqM" }
+    %meta{:name => "keywords", :content => Category.all.collect(&:title_fa).join(" ")} 
+    %meta{:name => "description", :content => "کیمیاکاران, kimiakaran"}
+    %meta{content: "no", "http-equiv" => "kimiakaran, کیمیاکاران"}
+    = yield(:refresh_meta) if content_for?(:refresh_meta)
 
-  %body
+  %body{:class => I18n.locale}
+    
+    / Homepage Slider
+    
+    :javascript
+      window.user_slides = [#{Slide.get_supersized_js}]
+      $('ul#supersized li img').css('left', '0');
+      $('ul#supersized li img').css('width', '100%');
+    #home-slider.en
+      -@contact = Page.where(title: "Contact us")
+           
+      .contact-menu        
+        = link_to '#order' ,  :id => "contact-box" do        
+          #contact-btn-text{:class => I18n.locale}= 'اطلاعات تماس'
+          %i.font-icon-arrow-simple-down#contact-arrow
+      .control-nav
+        = link_to '#' , :class => "load-item", :id => "prevslide" do    
+          %i.font-icon-arrow-simple-left
+        = link_to '#' , :class => "load-item", :id => "nextslide" do        
+          %i.font-icon-arrow-simple-right
+        %ul#slide-list
+        = link_to '#work' ,  :id => "nextsection" do        
+          %i.font-icon-arrow-simple-down
+        #nextsection{:style => "margin-right:1px; text-align:center; "}
+          = link_to (image_tag 'flag/fa.png', :title => "کیمیاکاران فردوس", :alt => "کیمیاکاران فردوس"), locale: :fa
+          %br
+          = link_to (image_tag 'flag/en.png', :title => "KimiaKaran Ferdows", :alt => "KimiaKaran Ferdows"), locale: :en
+          
+        
+    / End Homepage Slider
+ 
     %header
-      .language
-        .lan-title= 'LANGUAGE'
-        = link_to (image_tag 'flag/en.png'), locale: :en          
-        = link_to (image_tag 'flag/fa.png'), locale: :fa
-      .menu
-        = render 'shared/menu'
-            
-      
+      .sticky-nav
+        %a#mobile-nav.menu-nav{href: "#menu-nav"} Menu
+        #logo
+          %a#goUp{href: "#home-slider", title: "KIMIAKARAN "}
+            =t('kimiakaran')
+        - if is_admin?
+          .admin_menu.fa
+            %h3= 'منوی مدیرسایت'
+            = render 'shared/admin_menu'
+        #google-search
+          = form_tag "http://google.com/search", method: "get",  :target=> "_blank", :class => "contact-form", :id => "contact-form" do   
+            %p.contact-name
+              .google-field= text_field_tag :q, '', placeholder: t('Google_Search'), :id => "contact_name", :class => I18n.locale    
+              .google-submit= submit_tag  t('submit_search'), :name => "sa", :id => "search-submit" , :class => I18n.locale    
+              .clear-float
+        %nav#menu
+          = render 'shared/menu'
+    / End Header
     = yield 
+    = render "shared/footer"
+    / Back To Top
+    %a#back-to-top{href: "#"}
+      %i.font-icon-arrow-simple-up
+    / End Back to Top
+
+    
+  = javascript_include_tag "application"
+  

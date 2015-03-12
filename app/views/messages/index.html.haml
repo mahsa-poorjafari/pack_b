@@ -1,25 +1,34 @@
-%h1 Listing messages
+.fa.other-page 
+  %h1 لیست پیام های ارسال شده
 
-%table
-  %tr
-    %th Name
-    %th Email
-    %th Phone number
-    %th Text
-    %th
-    %th
-    %th
-
-  - @messages.each do |message|
+  %table
     %tr
-      %td= message.name
-      %td= message.email
-      %td= message.phone_number
-      %td= message.text
-      %td= link_to 'Show', message
-      %td= link_to 'Edit', edit_message_path(message)
-      %td= link_to 'Destroy', message, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %th ردیف
+      %th نوع پیام
+      %th نام
+      %th ایمیل
+      %th شماره تلفن
+      %th متن پیام
+      %th تاریخ ارسال
+      %th
+      
 
-%br
+    - @messages.each_with_index do |message, i|
+      %tr
+        %td= (i+1)
+        %td
+          - if message.message_type
+            سفارش محصول
+          -else
+            پیام ارسالی
+        %td= message.name
+        %td= message.email
+        %td= message.phone_number
+        %td= message.text
+        %td= JalaliDate.new(message.created_at)
+        %td
+          = link_to 'مشاهده', message
+          \|
+          = link_to 'حذف', message, :method => :delete, :data => { :confirm => 'آیا مطمئن هستید؟' }
 
-= link_to 'New Message', new_message_path
+  

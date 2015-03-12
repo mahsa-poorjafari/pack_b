@@ -20,7 +20,38 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  
+  kimiakaran: 'KIMIA KARAN'
+  
+  home: 'HOME'
+  work: 'OUR PRODUCTS'
+  about: 'ABOUT US'
+  contact: 'AGENTS'
+  order_menu: 'ORDER'
+  Get_in_Touch: 'Get in Touch'
+  set_order: 'Set Your Order'
+  Contact_Details: 'Contact With KimiaKaran'
+  agent-list: 'Agents List'
+  Google_Search: 'Google Search'
+  submit_search: 'Search'
+  pro_title: 'Product'
+  our_work: 'KimiaKaran Product'
+  type_of_work: 'Type Of KimiaKaran Product'
+  All_Projects: 'All Projects'
+  visit_site: 'Visited'
+  agent:
+    name: 'Name'
+    address: 'Address'
+    phone: 'Phone'
+  msg:
+    name: 'Full Name'
+    email: 'Email Address'
+    phone: 'Your Phone Number'
+    text: 'Your Message'
+    send: 'SEND'
+  order:
+    text: 'Your Order'
+    send: 'Set Order'
   ckeditor:
     page_title: 'CKEditor Files Manager1'
     confirm_delete: 'Delete file?1'
@@ -29,3 +60,7 @@ en:
       upload: 'Upload1'
       delete: 'Delete1'
       next: 'Next1'
+      
+      
+      
+      

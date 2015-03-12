@@ -1,0 +1,150 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+
+.clear-float {clear:both}
+
+.en {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; direction:ltr}
+.fa {font-family:  'open_sansregular'; direction:rtl}
+
+.row.en [class*="span"] {float:left}
+.row.fa [class*="span"] {float:right}
+.contact-submit.fa .submit {font-family:  'open_sansregular'; direction:rtl}
+.contact-submit.en .submit {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; direction:ltr}
+
+.other-page {min-height:300px; padding:5%; background:#B0D6BA; color:#000;}
+
+ul#other-page-menu {display: block;
+list-style-type: disc;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;}
+ul#other-page-menu li {list-style: none;
+display: inline-block;
+margin-left: 50px; }
+ul#other-page-menu li a {color:#fff;}
+ul#other-page-menu li.active a, ul#other-page-menu  li:hover a{color:#FFEC00;}
+.admin_menu {
+  z-index:1000;
+  margin-left:10px;
+  position:absolute;
+  top:70%;  width:20%;
+  left:0;  
+  overflow:hidden;  
+  background:#4A7D47; color:#FFEC00; height:35px;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+.admin_menu h3 {text-align:center
+}
+.admin_menu:hover { height:250px; cursor:pointer}
+.admin_menu ul{list-style-type:circle; text-align:right; padding-right:35px; }
+.admin_menu ul li a{color:#FFEC00;}
+.admin_menu ul li a:hover{color:#000;}
+
+span.Necessary {color:#DE5E60;}
+.container {position:absolute; width:100%; padding:4%;}
+.contact-bg { height:130%}
+.order-bg {background:#CBE3CB;
+  background-size:cover; height:130%}
+.work-bg { min-height:215%}
+.contact-bg:before, .work-bg:before{
+    content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;    
+		background-image: radial-gradient(circle, #1B1E1C, #234723,#001C00);
+		opacity: .65; 
+    filter: alpha(opacity=65); /* For IE8 and earlier */
+
+}
+.admin-link a.item-links{ color:red; font-size:14px; float:right; width:50px; position:relative; z-index:20}
+.admin-link a.item-links:hover{ color:#FFF; }
+
+
+
+.project-pic {width:85%; float:left}
+.project-pic span.pro-title{width:100%; position:absolute; background:#4D4D4D; opacity:.7;
+filter: alpha(opacity=70); /* For IE8 and earlier */
+ color:#fff;
+  right:0; bottom:0;
+}
+.project-list {width:15%; float:right}
+
+
+ul.option-set li:hover a {color:#FFA500}
+ul.option-set li a.selected {text-shadow: 2px 2px #034D14;}
+
+.show-license {float:left; width:20%; margin:2%; }
+
+/* show products details  with ajax */
+#show-details{width:80%; 
+  height:150%; 
+  z-index:100; 
+  left:1%; 
+  position:absolute; 
+  background:#1A1A1A; opacity:.7; 
+  filter: alpha(opacity=70); /* For IE8 and earlier */
+  display:none; border-radius:5px; color:#FBFBA8;
+  padding:1%;
+}
+#show-details .pro-text {width:55%; overflow:hidden; height:100%; line-height:1.5em; text-align:justify; 
+margin-left:2%; margin-bottom:5%;
+padding-bottom:5%;}
+#show-details .pro-text h1, h2, h3, h4{color:#FFA500;}
+#show-details .pro-text:hover {width:55%; overflow-y:scroll}
+#show-details .pro-pic { width:32%; margin-right:2% ; text-align:left}
+#show-details .pro-pic .product-photo{ width:95%; margin:1% ; text-align:center; }
+#show-details .pro-pic .product-photo img{border:#000 2px solid; border-radius:5px;}
+.fancybox-title h4 {color:#F6F6A8;}
+ 
+#google-search {width:30%; float:left}
+#google-search .google-field{width:60%; margin:1%; float:right }
+#google-search .google-submit{width:30%; float:right; margin:1%;}
+#google-search .google-submit #search-submit{color:#fff; }
+#google-search .google-submit:hover #search-submit{color:#FFFF65}
+
+
+#about {min-height:70%}
+.agent_list {width:100%; background:#1a1a1a;opacity:.7; 
+filter: alpha(opacity=70); /* For IE8 and earlier */
+color:#fff}
+.agent_list table tr td, .agent_list table tr th,{padding:1%}
+.map-background {background-image: url('کیمیاکاران_فردوس.png') no-repeat}
+.slide-title {
+  background:#142F11;
+  opacity: .7; 
+  filter: alpha(opacity=70); /* For IE8 and earlier */
+  width:95%; height:100%;
+  padding:1%;
+  right:0;  
+  
+  color:#FBFBAF;
+  text-align:center;  
+  float:right;
+  position: absolute;
+}
+.slide-title p {width:95%; margin-bottom:1%}
+.ahoy {color:#F4F4AD;}
+.contact-menu {width:4%; height:28%; position:absolute; right:0; overflow:hidden}
+
